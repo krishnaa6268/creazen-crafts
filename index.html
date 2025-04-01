@@ -18,6 +18,7 @@
   <!--End Open-graph properties -->
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./assets/css/global.css">
   <link rel="stylesheet" href="./assets/css/index.css">
 </head>
@@ -33,19 +34,16 @@
         </button>
       </div>
       <div class="menu">
-        <a href="#">Home</a>
-        
+        <a href="#">Home</a>    
         <div href="#" class="category">
           Category
           <i class="fa-solid fa-caret-down c-down"></i>
           <i class="fa-solid fa-caret-up c-up"></i>
         </div>
-
         <a href="./src/about.html" class="about-us"> 
           About Us</a>
       </div>
     </div>
-
     <div class="seller-btn">
       <a href="./src/about.html" class="become-seller"><i class="fa-solid fa-handshake-angle"></i><span> Become a Seller</span></a>
     </div>
@@ -64,10 +62,20 @@
 <!-- -------------hero-section---------- -->
 <section>
   <div class="hero-banner-grid">
-    Lorem
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="./assets/images/page-imgages/grid-1.jpg" alt="grid-image"></div>
+        <div class="swiper-slide"><img src="./assets/images/page-imgages/grid-2.jpg" alt="grid-image"></div>
+        <div class="swiper-slide"><img src="./assets/images/page-imgages/grid-3.jpg" alt="grid-image"></div>
+        <div class="swiper-slide"><img src="./assets/images/page-imgages/grid-4.jpg" alt="grid-image"></div>
+        <div class="swiper-slide"><img src="./assets/images/page-imgages/grid-5.jpg" alt="grid-image"></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
   </div>
 </section>
 
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="./assets/js/index.js"></script>
 </body>
 </html>
