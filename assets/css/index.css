@@ -1,0 +1,260 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #fff;
+  font-family: Arial, sans-serif;
+}
+
+/* ----------------------------------------------------------------header--------------------------------------------------- */
+.header-index{
+  position:sticky;
+  top: 0;
+  margin-bottom: 20px;
+  left: 0;
+  width: 100%;
+  height:70px;
+  box-shadow: 0 0 5px 0 rgba(0,0,0,.251);
+  z-index: 90;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* -------nav-bar---------- */
+.header-index nav{
+  margin: 0 2%;
+  width: 99%;
+  height: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.logo-seach{
+  width: 85%;
+  display: flex;
+  align-items: center;
+  justify-content:start;
+  flex-direction:row;
+  column-gap: 5%;
+}
+
+.logo img{
+  height: 58px;
+  width: 180px;
+  cursor: pointer;
+}
+
+/* --------------search-bar------------- */
+.search-bar-container {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: #fffded;
+  border: 1px solid #e0e0e0;
+  border-radius: 25px;
+  width: 30%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.search-bar-container:hover {
+  box-shadow: 2px 2px 7px #9a9a9a;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #333;
+  background: transparent;
+  padding: 5px 40px 5px 20px;
+
+}
+
+.search-input::placeholder {
+  color: #aaa;
+ 
+  font-size: 14px;
+}
+
+.search-button {
+  background-color: #827f7e;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.search-button:hover {
+  background-color: #e04e52;
+}
+
+.search-icon {
+  color: #fff;
+  font-size: 14px;
+}
+
+/* -----header-menu---- */
+.menu{
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction:row;
+  column-gap: 30px;
+}
+.menu a{
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -1%;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  padding: 27px 0;
+  text-decoration: none;
+  color: #282c3f;
+}
+.menu a:hover{
+  color: #e04e52;
+  border-bottom: 4px solid #f54e77 ;
+} 
+.menu div:hover{
+  color: #e04e52;
+  border-bottom: 4px solid #f54e77 ;
+} 
+/* -----------------menu-catagory------------- */
+.menu div{
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -1%;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  padding: 27px 0;
+  text-decoration: none;
+  color: #282c3f;
+}
+.c-up{
+  opacity: 0;
+}
+.category:hover{
+  .c-down{
+    display: none;
+    opacity: 0;
+  }
+  .c-up{
+    opacity: 1;
+  }
+}
+
+/* ----------header-seller-btn-------- */
+.seller-btn{
+  width: 198px;
+  padding: 15px 5px;
+  margin: 0 8px;
+  height: 33%;
+  overflow: hidden;
+  text-align: center;
+  background-color: black;
+  border-radius: 10px;
+  column-gap: 0cap;
+  transition: background-color 0.3s;
+}
+.seller-btn a{
+  overflow: hidden;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 27px 0;
+  text-decoration: none;
+  color: white;
+}
+.seller-btn:hover{
+  background-color: #e04e52;
+}
+
+
+/* ---------profile-credenials-------- */
+/* .credential{
+  width: 10%;
+  display: flex;
+  column-gap: 0px;
+}
+.credential a{
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 27px 0;
+  text-decoration: none;
+  color: #282c3f;
+}
+.credential a:hover{
+  color: #e04e52;
+  border-bottom: 4px solid #f54e77 ;
+} */
+
+/* ----------login/signup--------- */
+
+.toggle-container {
+  width: 16%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 0;
+  margin-right: 1%;
+}
+
+.toggle-bar {
+  display: flex;
+  align-items: center;
+  background-color: #fffded;
+  border-radius: 25px;
+  padding: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-bar a {
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: all 0.8s ease;
+}
+
+.log-in, .sign-up {
+  color: #666;
+  font-weight: 500;
+}
+
+.log-in.active, .sign-up.active {
+  background-color: #636160;
+  color: white;
+  font-weight: 600;
+  
+}
+
+/* Hover effect only for the active button */
+.toggle-bar a.active:hover {
+  background-color: #e04e52; /* Darker purple on hover for active state */
+  color: white;
+}
+
+/* Remove hover effect for inactive buttons */
+.toggle-bar a:not(.active):hover {
+  color: #1b1b1b; /* No change for inactive buttons on hover */
+  cursor: default; /* Optional: Change cursor to indicate no hover effect */
+}
+
+/* --------------------Header-End------------------------------ */
+
+
+/* -------------------------------------------------------------Section-1: -------------------------------------------------------------- */
