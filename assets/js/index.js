@@ -1,6 +1,6 @@
-console.log("Hello Creazen Crafts...");
+console.log("Hello, Creazen Crafts...");
 
-// ------------Search-Button----------
+// ------------------------------Search-Button----------------------------
 document.addEventListener('DOMContentLoaded', () => {
   const searchInput = document.querySelector('.search-input');
   const searchButton = document.querySelector('.search-button');
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// ------------toogle-button-------------------
+// -----------------------------toogle-button-------------------------------------------
 // JavaScript to toggle the active state without preventing navigation
 
 const toggleLinks = document.querySelectorAll('.toggle-bar a');
@@ -63,7 +63,17 @@ toggleLinks.forEach(link => {
 
 
 
-//-----------swipper--------------
+
+
+
+
+
+
+
+
+
+
+//----------------------------Section-1: hero - swipper----------------------------
 var swiper = new Swiper(".mySwiper", {
     spaceBetween: 30,
     centeredSlides: true,
@@ -80,3 +90,25 @@ var swiper = new Swiper(".mySwiper", {
       prevEl: ".swiper-button-prev",
     },
   });
+
+
+//----------------------------Section-2: Video Grid ----------------------------
+const videos = document.querySelectorAll('.video');
+function pauseAllVideos() {
+    videos.forEach((video) => {
+        video.pause();
+    });
+}//to pause all the video
+
+function playVideoOnHover(event) {
+    pauseAllVideos();
+    event.currentTarget.querySelector('.video').play();
+}
+
+document.querySelectorAll('.video-wrapper').forEach((wrapper) => {
+    wrapper.addEventListener('mouseover', playVideoOnHover);
+
+    wrapper.addEventListener('mouseleave', () => {
+        wrapper.querySelector('.video').pause();
+    });
+});
