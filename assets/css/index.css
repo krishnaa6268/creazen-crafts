@@ -513,7 +513,7 @@ body {
   top: 0;
   display: flex;
   align-items: flex-end;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: white;
   background: linear-gradient(rgba(39, 39, 39, 0.59), rgba(58, 58, 58, 0.47), rgba(0, 0, 0, 0.649), rgba(0, 0, 0, 0.805));
 }
