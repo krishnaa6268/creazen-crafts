@@ -99,18 +99,23 @@ ul {
 }
 
 .cta {
-  text-align: center;
+  
   margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .cta button {
+  width: 50%;
   background-color: #251209;
   color: white;
-  padding: 1.2rem 20rem;
+  padding: 1rem 1rem;
   border: none;
   border-radius: 6px;
-  font-size: 1.1rem;
-  margin: 2rem;
+  font-size: 1rem;
+  margin:2rem ;
   cursor: pointer;
   transition: background 0.3s ease;
 }
