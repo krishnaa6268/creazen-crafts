@@ -1,0 +1,107 @@
+/* ---------------------------------------------Footer-------------------------------------------------------- */
+
+.footer-container {
+  max-width: 100vw;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+}
+
+#footer-middle-line {
+  min-width: 100%;
+  height: 2px;
+  background-color: gray;
+  margin: 20px 0px;
+}
+
+.footer-more-info-container {
+  margin: 25px 0;
+  width: 80%;
+
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-family: Arial, sans-serif;
+}
+
+.more-info-list-item {
+  min-width: 20%;
+  color: black;
+}
+
+.more-info-list-item h2 {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.more-info-list-item ul {
+  margin-top: 20px;
+}
+
+.more-info-list-item ul a {
+  text-decoration: none;
+}
+
+.more-info-list-item ul li {
+  list-style: none;
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin-top: 17px;
+  color: #282c3f;
+  cursor: pointer;
+}
+
+.footer-last-container {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+
+}
+
+.footer-last-content {
+  min-width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.footer-last-container img {
+  width: 208px;
+}
+
+.footer-last-content p {
+  color: #282c3f;
+  font-size: 0.9rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+
+}
+
+.footer-social-media-container a {
+  text-decoration: none;
+  color: #282c3f;
+}
+
+.social-icon-container span i {
+  margin-right: 30px;
+  width: 30px;
+  color: black;
+  cursor: pointer;
+  transition: filter 0.1s ease-in;
+}
+
+.social-icon-container span img:hover {
+  filter: drop-shadow(0px 0px 10px #282c3f);
+}
+
+
+/* --------Footer-End---------- */

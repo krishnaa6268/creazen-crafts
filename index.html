@@ -1,81 +1,367 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Creazen Crafts . Bringing Ideas to Reality</title>
-  <link rel="icon" type="./image/x-icon" href="./assets/icons/favicon-main.ico" />
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Creazen Crafts . Bringing Ideas to Reality</title>
+        <link rel="icon" type="./image/x-icon"
+            href="./assets/icons/favicon-main.ico" />
 
-  <!-- Open-graph properties -->
-  <meta property="og:url" content="https://creazencrafts.vercel.app/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="A Universe of Colors, Textures, and Creativity!" />
-  <meta property="og:description" content="Explore a world of creativity with Creazen Crafts! Discover unique handmade crafts, 
-  DIY inspirations, and artistic designs that bring imagination to reality. Join us in crafting joy and creativity every day!"/>
-  <meta property="og:image" content="https://creazencrafts.vercel.app/assets/images/logos/creazen-parent-logo.png" />
-  <meta property="og:image:width" content="200" />
-  <meta property="og:image:height" content="200" />
-  <!--End Open-graph properties -->
+        <!-- Team: Megha Chourasiya | Harshkumar Santoshkumar | Kumar Gourav | Krishna K. Gupta -->
+        <!-- Open-graph properties -->
+        <meta property="og:url" content="https://creazencrafts.vercel.app/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title"
+            content="A Universe of Colors, Textures, and Creativity!" />
+        <meta property="og:description"
+            content="Explore a world of creativity with Creazen Crafts! Discover unique handmade crafts, 
+  DIY inspirations, and artistic designs that bring imagination to reality. Join us in crafting joy and creativity every day!" />
+        <meta property="og:image"
+            content="https://creazencrafts.vercel.app/assets/images/logos/creazen-parent-logo.png" />
+        <meta property="og:image:width" content="200" />
+        <meta property="og:image:height" content="200" />
+        <!--End Open-graph properties -->
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="./assets/css/global.css">
-  <link rel="stylesheet" href="./assets/css/index.css">
-</head>
-<body>
-<header class="header-index">
-  <nav>
-    <div class="logo-seach">
-      <div class="logo"><a href="index.html"><img src="./assets/images/logos/creazen-parent-logo.png" alt="creazen-logo"></a> </div>    
-      <div class="search-bar-container">
-        <input type="text" class="search-input" placeholder="Search for products, items & more...">
-        <button class="search-button">
-            <span class="search-icon"><i class="fa fa-solid fa-magnifying-glass"></i></span>
-        </button>
-      </div>
-      <div class="menu">
-        <a href="#">Home</a>    
-        <div href="#" class="category">
-          Category
-          <i class="fa-solid fa-caret-down c-down"></i>
-          <i class="fa-solid fa-caret-up c-up"></i>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="./assets/css/global.css">
+        <link rel="stylesheet" href="./assets/css/index.css">
+    </head>
+    <body>
+        <header class="header-index">
+            <nav>
+                <div class="logo-seach">
+                    <div class="logo"><a href="index.html"><img
+                                src="./assets/images/logos/creazen-parent-logo.png"
+                                alt="creazen-logo"></a> </div>
+                    <div class="search-bar-container">
+                        <input type="text" class="search-input"
+                            placeholder="Search for products, items & more...">
+                        <button class="search-button">
+                            <span class="search-icon"><i
+                                    class="fa fa-solid fa-magnifying-glass"></i></span>
+                        </button>
+                    </div>
+                    <div class="menu">
+                        <nav class="navbar">
+                            <ul>
+                                <li><a href="./index.html">Home</a></li>
+                                <li class="dropdown">
+                                    <a href="#" class="category">
+                                        Category
+                                        <i class="fa-solid fa-caret-down c-down"></i>
+                                        <i class="fa-solid fa-caret-up c-up"></i>
+                                    </a>
+                                    <div class="dropdown-menu">
+                                        <a href="#">Wedding Invitation</a>
+                                        <a href="#">Ring Ceremony Platter</a>
+                                        <a href="#">Hamper Baskets</a>
+                                        <a href="#">Trunk Boxes</a>
+                                        <a href="#">Floral Jewellery</a>
+                                        <a href="#">Souvenir Spiritual Gifts</a>
+                                        <a href="#">Unicorn Lovers</a>
+                                        <a href="#">Gifts for Him/Her</a>
+                                        <a href="#">Wedding Return Favours</a>
+                                    </div>
+                                </li>
+                                <li><a href="./src/about-us.html" class="about-us">
+                                    About Us</a></li>
+                            </ul>
+                        </nav>                      
+                    </div>
+                </div>
+                <div class="seller-btn">
+                    <a href="./src/become-partner.html" class="become-seller"><i
+                            class="fa-solid fa-handshake-angle"></i><span>
+                            Become a Seller</span></a>
+                </div>
+                <!-- <div class="credential">
+        <a href="./src/about.html" class="become-seller"><i class="fa-solid fa-user-tie fa-xl"></i>Account</a>
+      </div> -->
+                <div class="toggle-container">
+                    <div class="toggle-bar">
+                        <a href="./src/login.html" class="log-in">Log in</a>
+                        <a href="./src/signup.html" class="sign-up active">Sign
+                            up</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- -------------Section:1-hero----------- -->
+        <section>
+            <div class="hero-banner-grid">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img
+                                src="./assets/images/page-imgages/grid-1.jpg"
+                                alt="grid-image"></div>
+                        <div class="swiper-slide"><img
+                                src="./assets/images/page-imgages/grid-2.jpg"
+                                alt="grid-image"></div>
+                        <div class="swiper-slide"><img
+                                src="./assets/images/page-imgages/grid-3.jpg"
+                                alt="grid-image"></div>
+                        <div class="swiper-slide"><img
+                                src="./assets/images/page-imgages/grid-4.jpg"
+                                alt="grid-image"></div>
+                        <div class="swiper-slide"><img
+                                src="./assets/images/page-imgages/grid-5.jpg"
+                                alt="grid-image"></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- -------------Section:2-Video----------- -->
+        <section class="video-section">
+            <div class="video-container">
+
+                <div class="video-wrapper animate1">
+                    <video class="video" src="./assets/videos/art-paper.mp4"
+                        muted loop></video>
+
+                    <div class="overlay">
+                        <h1>Your Partner in Digital Innovation</h1>
+                        <div class="overlay-text">
+                            <p>Driving progress with tailored technology
+                                solutions for a dynamic marketplace</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-wrapper animate1">
+                    <video class="video" src="./assets/videos/buke-love.mp4"
+                        muted loop></video>
+                    <div class="overlay">
+                        <h1>Innovate Beyond Boundaries</h1>
+                        <div class="overlay-text">
+                            <p>Empowering businesses with innovative technology
+                                solutions for a smarter future</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-wrapper animate2">
+                    <video class="video" src="./assets/videos/paint-women.mp4"
+                        muted loop></video>
+                    <div class="overlay">
+                        <h1>Accelerating Digital Transformation</h1>
+                        <div class="overlay-text">
+                            <p>Building seamless integrations and connectivity
+                                solutions that drive modern enterprises</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-wrapper animate2">
+                    <video class="video" src="./assets/videos/sewing.mp4" muted
+                        loop></video>
+                    <div class="overlay">
+                        <h1>Connecting Tomorrow, Today</h1>
+                        <div class="overlay-text">
+                            <p>Breaking barriers with transformative
+                                technologies that expand what’s possible</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- -------------Section:3-Content----------- -->
+        <section>
+
+        </section>
+
+        <!-- -------------Section:4-hero----------- -->
+        <section id="Services">
+            <div class="service-container">
+                <div class="services-heading">
+                    <h1>Services</h1>
+                    <h2>Transform your business with advanced technologies</h2>
+                </div>
+                <div class="service-container-content">
+                    <a href="#">
+                        <div class="service-img-container">
+                            <img
+                                src="./assets/images/services/Artifical-image.png"
+                                alt="service-image">
+                            <div class="service-overlay">
+                                <p>Artificial Intelligence</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="service-img-container">
+                            <img
+                                src="./assets/images/services/cloud-home-page-png.png"
+                                alt="service-image">
+                            <div class="service-overlay">
+                                <p>Cloud</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="service-img-container">
+                            <img
+                                src="./assets/images/services/Consulting-images.png"
+                                alt="service-image">
+                            <div class="service-overlay">
+                                <p>Consulting</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="service-img-container">
+                            <img
+                                src="./assets/images/services/Cybersecurity-image.png"
+                                alt="service-image">
+                            <div class="service-overlay">
+                                <p>Cybersecurity</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- sec-7 -->
+        <div class="banner-section">
+            <div class="banner-content">
+                <h1>Unleash Creativity, Craft with Creazen Crafts.</h1>
+                <p>In a world of endless ideas, each handmade piece is a leap into your imagination.</p>
+                <a href="./src/contact.html"><button class="btn">Tell us</button></a>
+            </div>
         </div>
-        <a href="./src/about.html" class="about-us"> 
-          About Us</a>
-      </div>
-    </div>
-    <div class="seller-btn">
-      <a href="./src/about.html" class="become-seller"><i class="fa-solid fa-handshake-angle"></i><span> Become a Seller</span></a>
-    </div>
-    <!-- <div class="credential">
-      <a href="./src/about.html" class="become-seller"><i class="fa-solid fa-user-tie fa-xl"></i>Account</a>
-    </div> -->
-    <div class="toggle-container">
-      <div class="toggle-bar">
-          <a href="./src/login.html" class="log-in">Log in</a>
-          <a href="./src/signup.html" class="sign-up active">Sign up</a>
-      </div>
-  </div>
-  </nav>
-</header>
-  
-<!-- -------------hero-section---------- -->
-<section>
-  <div class="hero-banner-grid">
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="./assets/images/page-imgages/grid-1.jpg" alt="grid-image"></div>
-        <div class="swiper-slide"><img src="./assets/images/page-imgages/grid-2.jpg" alt="grid-image"></div>
-        <div class="swiper-slide"><img src="./assets/images/page-imgages/grid-3.jpg" alt="grid-image"></div>
-        <div class="swiper-slide"><img src="./assets/images/page-imgages/grid-4.jpg" alt="grid-image"></div>
-        <div class="swiper-slide"><img src="./assets/images/page-imgages/grid-5.jpg" alt="grid-image"></div>
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </div>
-</section>
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="./assets/js/index.js"></script>
-</body>
+        <!-- -------------Section:- Footer----------- -->
+        <!-- footer -->
+        <footer id="Footer">
+            <div id="footer-middle-line"></div>
+            <div class="footer-container">
+                <div class="footer-more-info-container">
+                    <div class="more-info-list-item">
+                        <h2>Products</h2>
+                        <ul>
+                            <a href="#">
+                                <li>Wedding Invitation</li>
+                            </a>
+                            <a href="#">
+                                <li>Ring Ceremony Platter</li>
+                            </a>
+                            <a href="#">
+                                <li>Hamper Baskets</li>
+                            </a>
+                            <a href="#">
+                                <li>Trunk Boxes</li>
+                            </a>
+                            <a href="#">
+                                <li>Floral Jewellery</li>
+                            </a>
+                            <a href="#">
+                                <li>Souvenir Spritual Gifts</li>
+                            </a>
+                            <a href="#">
+                                <li>Unicorn Lovers</li>
+                            </a>
+                            <a href="#">
+                                <li>Gifts for Him/her</li>
+                            </a>
+                            <a href="#">
+                                <li>Wedding Return Favours</li>
+                            </a>
+                        </ul>
+                    </div>
+
+                    <div class="more-info-list-item">
+                        <h2>Services</h2>
+                        <ul>
+                            <a href="#">
+                                <li>Custom Orders</li>
+                            </a>
+                            <a href="#">
+                                <li>Crafting Blog or Inspiration Hub</li>
+                            </a>
+                            <a href="#">
+                                <li>Gift Customization & Wrapping Services</li>
+                            </a>
+                            <a href="#">
+                                <li>Printable Craft Planners & Trackers</li>
+                            </a>
+                            <a href="#">
+                                <li>Eco-Friendly & Upcycling Section</li>
+                            </a>
+                            <a href="#">
+                                <li>DIY Home Decor Projects</li>
+                            </a>
+                            <a href="#">
+                                <li>Enterprises solution</li>
+                            </a>
+                            <a href="#">
+                                <li>Craft Mail Newsletter</li>
+                            </a>
+                        </ul>
+                    </div>
+
+                    <div class="more-info-list-item">
+                        <h2>More Information</h2>
+                        <ul>
+                            <a href="./src/contact.html">
+                                <li>Contact us</li>
+                            </a>
+                            <a href="./src/become-partner.html">
+                                <li>Become a Seller</li>
+                            </a>
+                            <a href="./src/career-with-creazen.html">
+                                <li>Work with us</li>
+                            </a>
+                            <a href="./src/about-us.html">
+                                <li>About us </li>
+                            </a>
+                            <a href="./src/policy.html">
+                                <li>Privacy Policies</li>
+                            </a>
+                            <a href="mailto: creazen@gmail.com">
+                                <li>Support</li>
+                            </a>
+                            <a href="#">
+                                <li>Blogs</li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="footer-middle-line"></div>
+
+                <div class="footer-last-container">
+                    <div class="footer-last-content">
+                        <img
+                            src="./assets/images/logos/creazen-parent-logo-whitebg.png">
+                        <p> ©️ 2025 Creazen Crafts. All Rights Reserved</p>
+                    </div>
+
+                    <div class="social-icon-container">
+                        <a href="#"><span><i
+                                    class="fa-brands fa-instagram fa-xl"></i></span></a>
+                        <a href="#"><span><i
+                                    class="fa-brands fa-facebook fa-xl"></i></span></a>
+                        <a href="#"><span><i
+                                    class="fa-brands fa-x fa-xl"></i></span></a>
+                        <a href="#"><span><i
+                                    class="fa-brands fa-linkedin fa-xl"></i></span></a>
+                                   
+                <a href="mailto: creazen@gmail.com"><span><i
+                                    class="fa-solid fa-envelope fa-xl"></i></span></a>               
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="./assets/js/index.js"></script>
+    </body>
 </html>
