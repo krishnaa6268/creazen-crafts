@@ -261,7 +261,7 @@ body {
 .form-container button {
   flex: 1;
   padding: 12px;
-  background-color: #255427;
+  background-color: #6d6e6d;
   color: white;
   border: none;
   border-radius: 6px;
@@ -271,11 +271,11 @@ body {
 }
 
 .form-container button[type="reset"] {
-  background-color: #5a1813;
+  background-color: #6d6e6d;
 }
 
 .form-container button:hover {
-  opacity: 0.9;
+  opacity: 0.6;
 }
 
 .form-container .error {
