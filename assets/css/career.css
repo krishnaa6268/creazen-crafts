@@ -189,15 +189,15 @@ body {
   max-width: 1000px;
   margin: 50px auto;
   padding: 20px;
-  background: #f4e8e8;
+  background: #f4e8e8c6;
   border-radius: 10px;
 }
 
 .form-container .form-box {
-  background: #fff;
+  background: #ffffff;
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .form-container h2 {
@@ -206,10 +206,14 @@ body {
   color: #333;
 }
 
+.form-container span{
+  color: red;
+}
+
 .form-container label {
   display: block;
   margin-bottom: 5px;
-  font-weight: bold;
+  font-weight: 550;
 }
 
 .form-container input[type="text"],

@@ -110,45 +110,48 @@
     <section>
       <div class="form-container">
         <div class="form-box">
-          <h2>Job Application Form</h2>
+          <h2>Job Application Form </h2>
           <form id="jobForm" name="submit-to-google-sheet" target="_blank">
-            <label for="fullname">Full Name</label>
+            <label for="fullname">Full Name<span>*</span></label>
             <input type="text" id="fullname" name="Full Name" required>
     
-            <label for="email">Email</label>
+            <label for="email">Email<span>*</span></label>
             <input type="email" id="email" name="Email" required>
     
-            <label>Gender</label>
+            <label>Gender<span>*</span></label>
             <div class="radio-group">
               <label><input type="radio" name="Gender" value="male" required> Male</label>
               <label><input type="radio" name="Gender" value="female"> Female</label>
               <label><input type="radio" name="Gender" value="other"> Other</label>
             </div>
     
-            <label for="dob">Date of Birth</label>
+            <label for="dob">Date of Birth<span>*</span></label>
             <input type="date" id="dob" name="DOB" required>
     
-            <label for="contact">Contact No</label>
+            <label for="contact">Contact No<span>*</span></label>
             <input type="tel" id="contact" name="Contact" pattern="[0-9]{10}" required placeholder="+91899999999">
 
             <label for="Whatsapp">WhatsApp No</label>
             <input type="tel" id="Whatsapp" name="Whatsapp" pattern="[0-9]{10}" required placeholder="+91899999999">
     
-            <label>Job Type</label>
+            <label>Job Type<span>*</span></label>
             <div class="radio-group">
               <label><input type="radio" name="Job Type" value="internship" required> Internship</label>
               <label><input type="radio" name="Job Type" value="fresher"> Fresher</label>
               <label><input type="radio" name="Job Type" value="experience"> Experience</label>
             </div>
     
-            <label for="experience">Work Experience (in years)</label>
+            <label for="experience">Work Experience (in years)<span>*</span></label>
             <input type="text" id="experience" name="Experience" placeholder="0, 1, 2.5" required>
     
-            <label for="education">Education</label>
+            <label for="education">Education<span>*</span></label>
             <input type="text" id="education" name="Education" placeholder="MCA, BCA, B.Tech" required>
-    
+
+            <label for="resume">Resume<span>*</span></label>
+            <input type="url" id="resume" name="Resume" required placeholder="https://gdrive.resume.com">
+
             <label for="portfolio">Portfolio Link</label>
-            <input type="url" id="portfolio" name="Portfolio" placeholder="https://yourportfolio.com">
+            <input type="url" id="portfolio" name="Portfolio" placeholder="Linkedin / Github">
     
             <label for="feedback">Feedback</label>
             <textarea id="feedback" name="Feedback" rows="4" placeholder="Any feedback or message..."></textarea>
