@@ -112,46 +112,50 @@
         <div class="form-box">
           <h2>Job Application Form </h2>
           <form id="jobForm" name="submit-to-google-sheet" target="_blank">
+
             <label for="fullname">Full Name<span>*</span></label>
-            <input type="text" id="fullname" name="Full Name" required>
+            <input type="text" id="fullname" name="Full Name" placeholder="Creazen Crafts" required maxlength="20">
     
             <label for="email">Email<span>*</span></label>
-            <input type="email" id="email" name="Email" required>
+            <input type="email" id="email" name="Email" placeholder="you@creazen.com" required>
     
             <label>Gender<span>*</span></label>
             <div class="radio-group">
-              <label><input type="radio" name="Gender" value="male" required> Male</label>
-              <label><input type="radio" name="Gender" value="female"> Female</label>
-              <label><input type="radio" name="Gender" value="other"> Other</label>
+              <label><input type="radio" name="Gender" value="Male" required> Male</label>
+              <label><input type="radio" name="Gender" value="Female"> Female</label>
+              <label><input type="radio" name="Gender" value="Other"> Other</label>
             </div>
     
             <label for="dob">Date of Birth<span>*</span></label>
             <input type="date" id="dob" name="DOB" required>
     
             <label for="contact">Contact No<span>*</span></label>
-            <input type="tel" id="contact" name="Contact" pattern="[0-9]{10}" required placeholder="+91899999999">
+            <input type="tel" id="contact" name="Contact" pattern="[0-9]{10}" required placeholder="899999999">
 
             <label for="Whatsapp">WhatsApp No</label>
-            <input type="tel" id="Whatsapp" name="Whatsapp" pattern="[0-9]{10}" required placeholder="+91899999999">
+            <input type="tel" id="Whatsapp" name="Whatsapp" pattern="[0-9]{10}" required placeholder="899999999">
     
+            <label for="address">Full Address<span>*</span></label>
+            <input type="text" id="address" name="Address" required placeholder="Flat/ House-No, Area, City, District, State, Contry, Pincode">
+
             <label>Job Type<span>*</span></label>
             <div class="radio-group">
-              <label><input type="radio" name="Job Type" value="internship" required> Internship</label>
-              <label><input type="radio" name="Job Type" value="fresher"> Fresher</label>
-              <label><input type="radio" name="Job Type" value="experience"> Experience</label>
+              <label><input type="radio" name="Job Type" value="Internship" required> Internship</label>
+              <label><input type="radio" name="Job Type" value="Fresher"> Fresher</label>
+              <label><input type="radio" name="Job Type" value="Experience"> Experience</label>
             </div>
     
             <label for="experience">Work Experience (in years)<span>*</span></label>
-            <input type="text" id="experience" name="Experience" placeholder="0, 1, 2.5" required>
+            <input type="text" id="experience"  pattern="[0-9]{2}" name="Experience" placeholder="00, 07, 12" required >
     
             <label for="education">Education<span>*</span></label>
             <input type="text" id="education" name="Education" placeholder="MCA, BCA, B.Tech" required>
 
             <label for="resume">Resume URL<span>*</span></label>
-            <input type="url" id="resume" name="Resume" required placeholder="https://gdrive.resume.com">
+            <input type="url" id="resume" name="Resume" required placeholder="https://gdrive.resume.com" title="Include https://">
 
             <label for="portfolio">Portfolio</label>
-            <input type="url" id="portfolio" name="Portfolio" placeholder="Linkedin / Github">
+            <input type="url" id="portfolio" name="Portfolio" placeholder="Linkedin / Github" title="Include https://">
     
             <label for="feedback">Feedback</label>
             <textarea id="feedback" name="Feedback" rows="4" placeholder="Any feedback or message..."></textarea>

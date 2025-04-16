@@ -189,17 +189,19 @@ body {
   max-width: 1000px;
   margin: 50px auto;
   padding: 20px;
-  background: #f4e8e8c6;
+  background: #f6eaeac6;
   border-radius: 10px;
 }
 
 .form-container .form-box {
-  background: #ffffff;
+  background: #faf6ec;
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  
 }
-
+.form-container .form-box:hover{
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
 .form-container h2 {
   text-align: center;
   margin-bottom: 20px;
@@ -212,8 +214,13 @@ body {
 
 .form-container label {
   display: block;
-  margin-bottom: 5px;
   font-weight: 550;
+  margin: 0.4rem 0;
+  font-size: 1rem;
+  font-family: "Graphik SemiBold", "Arial", Sans-Serif;
+  color: #4a4a4a;
+  line-height: 1em;
+  font-weight: 600;
 }
 
 .form-container input[type="text"],
@@ -223,16 +230,21 @@ body {
 .form-container input[type="tel"],
 .form-container textarea {
   width: 98%;
+  height: 1.7em;
   padding: 10px;
   margin-bottom: 15px;
   border: 1px solid #7c7979;
   border-radius: 6px;
+
+  font-size: 0.8rem;
+  color: #4A4A4A;
+  background-color: #fff;
 }
 
 .form-container .radio-group,
 .form-container .radio-group label {
   display: inline-block;
-  margin-right: 40px;
+  margin: 0.1rem 1rem 0.4rem 0 ;
   font-weight: normal;
 }
 
