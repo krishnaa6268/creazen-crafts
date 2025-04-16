@@ -110,7 +110,8 @@
     <section>
       <div class="form-container">
         <div class="form-box">
-          <h2>Job Application Form </h2>
+          <h2>Creazen Careers Application</h2>
+          
           <form id="jobForm" name="submit-to-google-sheet" target="_blank">
 
             <label for="fullname">Full Name<span>*</span></label>
@@ -144,7 +145,23 @@
               <label><input type="radio" name="Job Type" value="Fresher"> Fresher</label>
               <label><input type="radio" name="Job Type" value="Experience"> Experience</label>
             </div>
-    
+
+            <label for="position">Position Applied For<span>*</span></label>
+            <select id="position" name="Position" required>         
+              <option value="Craft Designer">Craft Designer</option>
+              <option value="Jewelry Designer">Jewelry Designer</option>
+              <option value="Product Creator (Handmade Goods)">Product Creator (Handmade Goods)</option>
+              <option value="Embroidery Artist">Embroidery Artist</option>
+              <option value="Customized Gift Maker">Customized Gift Maker</option>
+              <option value="Painting & Sketch Artist">Painting & Sketch Artist</option>
+              <option value="NA">----------</option>
+              <option value="Software Developer">Software Developer</option>
+              <option value="Web Developer">Web Developer</option>
+              <option value="Tester">Tester</option>
+              <option value="DevOps Engineer">DevOps Engineer</option>
+              <option value="Human Resource (HR)">Human Resource (HR)</option>
+            </select>            
+
             <label for="experience">Work Experience (in years)<span>*</span></label>
             <input type="text" id="experience"  pattern="[0-9]{2}" name="Experience" placeholder="00, 07, 12" required title="Include 0 as a prefix in single digit.">
     
