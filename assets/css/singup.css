@@ -10,7 +10,7 @@
 }
 
 body {
-  background-image: url(/creazen-crafts/assets/images/login/login.jpeg);
+  background-image: url(../images/login/login.jpeg);
 }
 
 
@@ -124,7 +124,7 @@ body {
 }
 
 .text-logo {
-  background-image: url('/creazen-crafts/assets/images/logos/creazen-parent-logo.png');
+  background-image: url('../images/logos/creazen-parent-logo.png');
   position: absolute;
   top: 5%;
   left: 7%;
