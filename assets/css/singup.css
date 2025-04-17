@@ -1,0 +1,517 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.poppins {
+  font-family: "Poppins", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(/creazen-crafts/assets/images/login/login.jpeg);
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.inner-container {
+  height: 605px;
+  width: 1044px;
+  background-color: #fafafa;
+  border-radius: 55px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ----------------------------left-container---------------------- */
+.left-container {
+  height: 567px;
+  width: 484px;
+  background-color: #edf2ef;
+  border-top-left-radius: 35px;
+  border-bottom-left-radius: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* -----------------------right-container------------------- */
+.right-container {
+  height: 567px;
+  width: 528px;
+  background-color: #fcfcfc;
+  border-top-right-radius: 35px;
+  border-bottom-right-radius: 35px;
+
+  border: solid 1px #AFAFAF;
+  box-sizing: border-box;
+
+}
+
+.right-inner {
+  height: 550px;
+  width: 525px;
+  padding-bottom: 10px;
+  max-height: 540px;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  /* Firefox scrollbar */
+  scrollbar-color: #bbb transparent;
+  /* Light gray scrollbar */
+  scroll-behavior: scroll;
+}
+
+.right-inner::-webkit-scrollbar {
+  width: 2px;
+}
+
+.right-inner::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+.right-inner::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  /* Darker on hover */
+}
+
+.right-inner::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  /* Scroll track color */
+}
+
+
+.img-overs-container {
+  position: relative;
+  background: linear-gradient(150deg, #065afa, #17aef0, #ecb2f7);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.img-bg {
+  position: relative;
+  transform: rotate(0deg);
+  width: 484px;
+  height: 567px;
+}
+
+.img-fg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Centers image */
+  opacity: 10;
+  /* Slight transparency */
+  width: 380px;
+  height: 388px;
+}
+
+.text-logo {
+  background-image: url('/creazen-crafts/assets/images/logos/creazen-parent-logo.png');
+  position: absolute;
+  top: 5%;
+  left: 7%;
+  width: 200px;
+  height: 100px;
+
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  font-size: 28px;
+  color: white;
+}
+
+/* --------------------progress-Bar-using-image------------------- */
+.p-bar {
+  width: 90%;
+  height: 34.89px;
+  padding: 12px 57px 31px 174px;
+}
+
+.p-bar img {
+  width: 180px;
+  height: 60px;
+}
+
+/* -----------------------use for hard-code design----------------- */
+/* .segment{
+  width: 144px;
+  height: 34px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0px;
+}
+.t-circle{
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border:2px #4971aa solid;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.inner-circle{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #1c4c8f;
+  border: 2px #4971aa solid;
+  box-sizing: border-box;
+}
+.line{
+  width: 120px;
+  height: 2px;
+  background-color: #1c4c8f;
+}
+
+.left-circle{
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border:2px #312E81 solid;
+  background-color: #312E81;
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tick-icon{
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px #312E81;
+  background-color: #312E81;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+
+/* ------------signup-nav----------------- */
+
+.signup-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 1px 30px;
+}
+
+.log-title {
+  font-weight: 600;
+  font-size: 32px;
+  color: #0075FF;
+}
+
+/* --------------toogle-switch------------ */
+.toggle-switch {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  width: 241px;
+  height: 48px;
+  background-color: #e6f0ff;
+  border-radius: 20px;
+  position: relative;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  box-shadow: inset 0 0 0 2px #DEEDFC;
+  overflow: hidden;
+}
+
+.toggle-background {
+  position: absolute;
+  margin: 9px 9px 9px 9px;
+  width: 112px;
+  height: 35px;
+  background-color: #003DD1;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.toggle-option {
+  flex: 1;
+  text-align: center;
+  font-weight: normal;
+  line-height: 40px;
+  cursor: pointer;
+  z-index: 1;
+  color: #000000;
+  transition: color 0.3s ease;
+}
+
+.toggle-input {
+  display: none;
+}
+
+#candidate:checked~.toggle-background {
+  transform: translateX(0);
+}
+
+#recruiter:checked~.toggle-background {
+  transform: translateX(100%);
+}
+
+#candidate:checked~.toggle-option[for="candidate"],
+#recruiter:checked~.toggle-option[for="recruiter"] {
+  color: #fff;
+}
+
+#candidate:checked~.toggle-option[for="recruiter"],
+#recruiter:checked~.toggle-option[for="candidate"] {
+  color: #333;
+}
+
+
+/* -----------------content---------------- */
+
+.create-ac {
+  width: 478px;
+  height: 37px;
+  line-height: 37px;
+  letter-spacing: -1%;
+  padding-top: 20px;
+  padding-left: 30px;
+  font-weight: 600;
+
+  color: #333333;
+}
+
+.sub-line {
+  width: 478px;
+  height: 18px;
+  letter-spacing: -1%;
+  padding: 0px 0px 30px 30px;
+  font-size: 12px;
+  opacity: 50%;
+}
+
+
+/* --------------form------------------- */
+
+.signup-container {
+  padding-left: 30px;
+  padding-right: 50px;
+  border-radius: 10px;
+  width: 450px;
+}
+
+
+.signup-form label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #333333;
+}
+
+.signup-form-input-f {
+  width: 98%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #ffffff;
+
+  color: #B8B8B8;
+}
+
+.astrisk {
+  color: red;
+}
+
+/* -------------------gender-selection---------------- */
+.gen-dob {
+  display: flex;
+  column-gap: 10px;
+}
+
+.gender-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.arrenge-gender {
+  display: flex;
+  flex-direction: row;
+  column-gap: 2px;
+}
+
+.gen-icon {
+  width: 20px;
+  height: 20px;
+  padding-left: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gen-icon-name {
+  width: 30px;
+  height: 20px;
+  color: #000000;
+  padding: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+}
+
+.gender-box {
+  width: 70px;
+  height: 71px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.gender-box i {
+  font-size: 24px;
+}
+
+.gender-box input {
+  display: none;
+}
+
+.gender-box label {
+  margin-top: 5px;
+  font-size: 14px;
+
+  background-color: #ffffff;
+  color: #B8B8B8;
+}
+
+/* On Selection */
+.gender-box input:checked+i,
+.gender-box input:checked+i+label {
+  color: #1324d6;
+}
+
+.gender-box input:checked+i+label {
+  font-weight: 600;
+}
+
+.gender-box input:checked+i+label+div {
+  border-color: #000;
+}
+
+/* -------------------DoB----------------- */
+.dob-container input {
+  background-color: #ffffff;
+  color: #B8B8B8;
+  width: 200px;
+}
+
+/* -----------------address----------------- */
+.address {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 20px;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.add-inp {
+  width: 92%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+
+
+  background-color: #ffffff;
+  color: #B8B8B8;
+}
+
+.signup-form-calender {
+  width: 75%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #f2f2f2;
+}
+
+
+
+/* ---------------------out-form----------------------- */
+.buttons {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+.continue-btn {
+  width: 100%;
+  background-color: #0033cc;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 12px 0px 10px 0px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.continue-btn:hover {
+  background-color: #0026a8;
+}
+
+.back-btn {
+  width: 100%;
+  background-color: white;
+  color: #0033cc;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 12px;
+  border: 2px solid #0033cc;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+
+.signup-text {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.signup-text a {
+  text-decoration: none;
+  color: #0033cc;
+  font-weight: 500;
+}
