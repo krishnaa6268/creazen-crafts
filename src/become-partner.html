@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Become Partner - Creazen Crafts</title>
+    <link rel="icon" type="./image/x-icon" href="../assets/icons/favicon-main.ico" />
+
+    <!-- Open-graph properties -->
+    <meta property="og:url" content="https://creazencrafts.vercel.app/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title"
+      content="A Universe of Colors, Textures, and Creativity!" />
+    <meta property="og:description"
+      content="Explore a world of creativity with Creazen Crafts! Discover unique handmade crafts, 
+  DIY inspirations, and artistic designs that bring imagination to reality. Join us in crafting joy and creativity every day!" />
+    <meta property="og:image" content="https://creazencrafts.vercel.app/assets/images/logos/creazen-parent-logo.png" />
+    <meta property="og:image:width" content="200" />
+    <meta property="og:image:height" content="200" />
+    <!--End Open-graph properties -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <link rel="stylesheet" href="../assets/css/become-partner.css">
+  </head>
+  <body>
+    <header class="header-index">
+      <nav>
+          <div class="logo-seach">
+              <div class="logo"><a href="../index.html"><img
+                          src="../assets/images/logos/creazen-parent-logo.png"
+                          alt="creazen-logo"></a> </div>
+              <div class="search-bar-container">
+                  <input type="text" class="search-input"
+                      placeholder="Search for products, items & more...">
+                  <button class="search-button">
+                      <span class="search-icon"><i
+                              class="fa fa-solid fa-magnifying-glass"></i></span>
+                  </button>
+              </div>
+              <div class="menu">
+                  <nav class="navbar">
+                      <ul>
+                          <li><a href="../index.html">Home</a></li>
+                          <li class="dropdown">
+                              <a href="#" class="category">
+                                  Category
+                                  <i class="fa-solid fa-caret-down c-down"></i>
+                                  <i class="fa-solid fa-caret-up c-up"></i>
+                              </a>
+                              <div class="dropdown-menu">
+                                <a href="../src/catagory.html">Wedding Invitation</a>
+                                <a href="../src/catagory.html">Ring Ceremony Platter</a>
+                                <a href="../src/catagory.html">Hamper Baskets</a>
+                                <a href="../src/catagory.html">Trunk Boxes</a>
+                                <a href="../src/catagory.html">Floral Jewellery</a>
+                                <a href="../src/catagory.html">Souvenir Spiritual Gifts</a>
+                                <a href="../src/catagory.html">Unicorn Lovers</a>
+                                <a href="../src/catagory.html">Gifts for Him/Her</a>
+                                <a href="../src/catagory.html">Wedding Return Favours</a>
+                            </div>
+                          </li>
+                          <li><a href="../src/about-us.html" class="about-us">
+                              About Us</a></li>
+                      </ul>
+                  </nav>                      
+              </div>
+          </div>
+          <div class="seller-btn">
+              <a href="../src/become-partner.html" class="become-seller"><i
+                      class="fa-solid fa-handshake-angle"></i><span>
+                      Become a Seller</span></a>
+          </div>
+          <!-- <div class="credential">
+  <a href="./src/about.html" class="become-seller"><i class="fa-solid fa-user-tie fa-xl"></i>Account</a>
+</div> -->
+          <div class="toggle-container">
+              <div class="toggle-bar">
+                  <a href="./src/login.html" class="log-in">Log in</a>
+                  <a href="./src/signup.html" class="sign-up active">Sign
+                      up</a>
+              </div>
+          </div>
+      </nav>
+  </header>
+
+    <!-- -------only page header------ -->
+    <div class="header-c">
+      <h1>Together with Creazen Crafts</h1>
+      <p>Where Creativity Meets Craftsmanship</p>
+    </div>
+
+    <section id="About">
+      <div class="about-us-container">
+          <div class="about-us-container-content">
+              <div class="left-heading">
+                  <p>Join Our Journey</p>
+                  <h1>Progress begins with action.</h1>
+              </div>
+              <div class="right-subheading">
+                  <h3>We recognize and value the unique potential of every person. At Creazen Crafts, we foster a culture of collaboration, inclusivity, and continuous development — ensuring your skills are strengthened and your ambitions are realized.</h3>
+              </div>
+          </div>
+      </div>
+  </section>
+
+    <!-- -----------Section:-Form---------- -->
+    <section>
+      <div class="form-container">
+        <div class="form-box">
+          <h2>Creazen Partner Application</h2>
+          
+          <form id="jobForm" name="submit-to-google-sheet" target="_blank">
+
+            <label for="fullname">Full Name<span>*</span></label>
+            <input type="text" id="fullname" name="Full Name" placeholder="Creazen Crafts" required maxlength="20">
+    
+            <label for="email">Email<span>*</span></label>
+            <input type="email" id="email" name="Email" placeholder="you@creazen.com" required>
+    
+            <label>Gender<span>*</span></label>
+            <div class="radio-group">
+              <label><input type="radio" name="Gender" value="Male" required> Male</label>
+              <label><input type="radio" name="Gender" value="Female"> Female</label>
+              <label><input type="radio" name="Gender" value="Other"> Other</label>
+            </div>
+    
+            <label for="dob">Date of Birth<span>*</span></label>
+            <input type="date" id="dob" name="DOB" required>
+    
+            <label for="contact">Contact No<span>*</span></label>
+            <input type="tel" id="contact" name="Contact" pattern="[0-9]{10}" required placeholder="899999999">
+
+            <label for="address">Full Address<span>*</span></label>
+            <input type="text" id="address" name="Address" required placeholder="Flat/ House-No, Area, City, District, State, Contry, Pincode">
+
+            <label for="craft-type">Craft Type<span>*</span></label>
+            <select id="craft-type" name="Craft Type" required>         
+              <option value="Paper Craft">Paper Art</option>
+              <option value="Resin Craft">Resin Craft</option>
+              <option value="Embraidery">Embraidery</option>
+              <option value="Embroidery Artist">Customize Gifts</option>
+              <option value="All Above">All Above</option>
+              <option value="Others">Others</option>
+            </select>
+
+
+            <label>Price Range<span>*</span></label>
+            <div class="radio-group">
+              <label><input type="radio" name="Price Range" value="50-500" required> 50 - 499</label>
+              <label><input type="radio" name="Price Range" value="501-1000"> 500 - 999</label>
+              <label><input type="radio" name="Price Range" value="1000+"> 1000+</label>
+            </div>
+
+            <label for="material-type">Material Type<span>*</span></label>
+            <input type="text" id="fullname" name="Material Type" placeholder="Fiber" required maxlength="20">
+
+            <label>Customization Available<span>*</span></label>
+            <div class="radio-group">
+              <label><input type="radio" name="Customization Available" value="Yes" required> Yes</label>
+              <label><input type="radio" name="Customization Available" value="No"> No</label>
+            </div>
+
+
+            <label for="product-return-rolicy">Product Return Policy<span>*</span></label>
+            <select id="product-return-rolicy" name="Product Return Policy" required>         
+              <option value="5-7 Days">5-7 Days</option>
+              <option value="10 Days">10 Days</option>
+              <option value="More Days">More Days</option>
+            </select>            
+
+            <label for="product-delivery-days">Product Delivery Days<span>*</span></label>
+            <select id="product-delivery-days" name="Product Delivery Days" required>         
+              <option value="Under 7 Days">Under 7 Days</option>
+              <option value="Under 14 Days">Under 14 Days</option>
+              <option value="More Extra Days">More Days</option>
+            </select> 
+
+
+            <label for="experience">Work Experience (in years)<span>*</span></label>
+            <input type="text" id="experience"  pattern="[0-9]{2}" name="Experience" placeholder="00, 07, 12" required title="Include 0 as a prefix in single digit.">
+    
+            <label for="education">Education<span>*</span></label>
+            <input type="text" id="education" name="Education" placeholder="MCA, BCA, B.Tech" required>
+
+            <label for="portfolio">Portfolio</label>
+            <input type="url" id="portfolio" name="Portfolio" placeholder="Linkedin / Github" pattern="https?://.+" title="Include http://">
+    
+            <label for="feedback">Why Us?</label>
+            <textarea id="feedback" name="Why Us?" rows="4" placeholder="Any feedback or message..."></textarea>
+    
+            <p class="error" id="errorMsg">Work experience must be at least 1 year for job type "Experience".</p>
+    
+            <div class="btn-group">
+              <button type="submit"><i class="fa fa-paper-plane"></i> Submit</button>
+              <button type="reset"><i class="fa fa-refresh"></i> Reset</button>
+            </div>
+          </form>
+        </div>
+    </section>
+
+
+    <!-- -------------Section:-Footer----------- -->
+    <!-- footer -->
+    <footer id="Footer">
+      <div id="footer-middle-line"></div>
+      <div class="footer-container">
+        <div class="footer-more-info-container">
+          <div class="more-info-list-item">
+            <h2>Products</h2>
+            <ul>
+              <a href="#">
+                <li>Wedding Invitation</li>
+              </a>
+              <a href="#">
+                <li>Ring Ceremony Platter</li>
+              </a>
+              <a href="#">
+                <li>Hamper Baskets</li>
+              </a>
+              <a href="#">
+                <li>Trunk Boxes</li>
+              </a>
+              <a href="#">
+                <li>Floral Jewellery</li>
+              </a>
+              <a href="#">
+                <li>Souvenir Spritual Gifts</li>
+              </a>
+              <a href="#">
+                <li>Unicorn Lovers</li>
+              </a>
+              <a href="#">
+                <li>Gifts for Him/her</li>
+              </a>
+              <a href="#">
+                <li>Wedding Return Favours</li>
+              </a>
+            </ul>
+          </div>
+
+          <div class="more-info-list-item">
+            <h2>Services</h2>
+            <ul>
+              <a href="#">
+                <li>Artificial Intelligence</li>
+              </a>
+              <a href="#">
+                <li>Cloud</li>
+              </a>
+              <a href="#">
+                <li>Consulting</li>
+              </a>
+              <a href="#">
+                <li>Cybersecurity</li>
+              </a>
+              <a href="#">
+                <li>Cognitive Business Operations</li>
+              </a>
+              <a href="#">
+                <li>Data &amp; Analytics</li>
+              </a>
+              <a href="#">
+                <li>Enterprises solution</li>
+              </a>
+              <a href="#">
+                <li>Network Solution and Services</li>
+              </a>
+            </ul>
+          </div>
+
+            <div class="more-info-list-item">
+              <h2>More Information</h2>
+              <ul>
+                  <a href="../src/contact.html">
+                      <li>Contact us</li>
+                  </a>
+                  <a href="../src/become-partner.html">
+                      <li>Become a Seller</li>
+                  </a>
+                  <a href="../src/career-with-creazen.html">
+                      <li>Work with us</li>
+                  </a>
+                  <a href="../src/about-us.html">
+                      <li>About us </li>
+                  </a>
+                  <a href="../src/policy.html">
+                      <li>Privacy Policies</li>
+                  </a>
+                  <a href="mailto: creazen@gmail.com">
+                      <li>Support</li>
+                  </a>
+                  <a href="#">
+                      <li>Blogs</li>
+                  </a>
+              </ul>
+          </div>
+        </div>
+
+        <div id="footer-middle-line"></div>
+
+        <div class="footer-last-container">
+          <div class="footer-last-content">
+            <img src="../assets/images/logos/creazen-parent-logo-whitebg.png">
+            <p> ©️ 2025 Creazen Crafts. All Rights Reserved</p>
+          </div>
+
+          <div class="social-icon-container">
+            <a href="#"><span><i
+                  class="fa-brands fa-instagram fa-xl"></i></span></a>
+            <a href="#"><span><i
+                  class="fa-brands fa-facebook fa-xl"></i></span></a>
+            <a href="#"><span><i class="fa-brands fa-x fa-xl"></i></span></a>
+            <a href="#"><span><i
+                  class="fa-brands fa-linkedin fa-xl"></i></span></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../assets/js/index.js"></script>
+    <script src="../assets/js/become-partner.js"></script>
+  </body>
+</html>
