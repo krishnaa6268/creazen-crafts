@@ -33,7 +33,7 @@
         <header class="header-index">
             <nav>
                 <div class="logo-seach">
-                    <div class="logo"><a href="index.html"><img
+                    <div class="logo"><a href="../index.html"><img
                                 src="../assets/images/logos/creazen-parent-logo.png"
                                 alt="creazen-logo"></a> </div>
                     <div class="search-bar-container">
@@ -92,6 +92,75 @@
 
         <!-- -------------Section:1-hero----------- -->
       
+
+        <header class=".header-2">
+            <nav>
+              <ul>
+                <li><a href="#" onclick="showCategory('wedding-invitation')">Wedding Invitation</a></li>
+                <li><a href="#" onclick="showCategory('ring-ceremony')">Ring Ceremony</a></li>
+                <li><a href="#" onclick="showCategory('hamper-baskets')">Hamper Baskets</a></li>
+                <li><a href="#" onclick="showCategory('trunk-boxes')">Trunk Boxes</a></li>
+                <li><a href="#" onclick="showCategory('floral-jewellery')">Floral Jewellery</a></li>
+                <li><a href="#" onclick="showCategory('souvenir-gifts')">Souvenir Gifts</a></li>
+                <li><a href="#" onclick="showCategory('unicorn-lovers')">Unicorn Lovers</a></li>
+                <li><a href="#" onclick="showCategory('gifts-him-her')">Gifts for Him/Her</a></li>
+                <li><a href="#" onclick="showCategory('wedding-return')">Wedding Return Favours</a></li>
+              </ul>
+            </nav>
+          </header>
+
+
+        <main>
+            <!-- Category title and items -->
+            <h2 id="category-title">Please select a category</h2>
+            <div id="items"></div>
+        
+            <!-- Cart Button -->
+            <div class="cart-btn" id="cart-container">
+              <button id="view-cart-btn" onclick="showCart()">View Cart</button>
+            </div>
+        
+            <!-- Cart Section -->
+            <div id="cart-modal" style="display:none;">
+              <h2>Your Cart</h2>
+              <div id="cart-items"></div>
+              <div id="total-price">
+                <p>Subtotal: ₹<span id="subtotal">0</span></p>
+                <p>Discount: ₹<span id="discount">0</span></p>
+                <p>Total Amount: ₹<span id="total-amount">0</span></p>
+              </div>
+              <button onclick="showDeliveryForm()">Proceed to Delivery</button>
+              <button onclick="closeCart()">Close</button>
+            </div>
+        
+            <!-- Delivery Form -->
+            <div id="delivery-form" style="display:none;">
+              <h2>Enter Delivery Address</h2>
+              <form id="address-form">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" required><br>
+                <label for="address">Address:</label>
+                <textarea id="address" required></textarea><br>
+                <label for="city">City:</label>
+                <input type="text" id="city" required><br>
+                <label for="zip">Zip Code:</label>
+                <input type="text" id="zip" required><br>
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" required><br><br>
+                <button type="submit">Submit Address</button>
+              </form>
+            </div>
+        
+            <!-- Payment Page -->
+            <div id="payment-page" style="display:none;">
+              <h2>Payment</h2>
+              <p>Total Amount: ₹<span id="payment-total"></span></p>
+              <button onclick="processPayment()">Pay Now</button>
+              <button onclick="cancelPayment()">Cancel</button>
+            </div>
+          </main>
+
+
 
         <!-- -------------Section:-Footer----------- -->
         <!-- footer -->
@@ -216,6 +285,7 @@
         </footer>
 
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="../assets/js/catagory.js"></script>
         <script src="../assets/js/index.js"></script>
         <script src="../assets/js/catagory.js"></script>
     </body>

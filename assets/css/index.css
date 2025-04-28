@@ -87,6 +87,7 @@ body {
   align-items: center;
   cursor: pointer;
   transition: background-color 0.3s;
+  margin: 3px;
 }
 .search-button:hover {
   background-color: #e04e52;
@@ -215,12 +216,10 @@ body {
   width: 198px;
   padding: 15px 5px;
   margin: 0 8px;
-  height: 33%;
   overflow: hidden;
   text-align: center;
   background-color: black;
   border-radius: 10px;
-  column-gap: 0cap;
   transition: background-color 0.3s;
 }
 .seller-btn a{
