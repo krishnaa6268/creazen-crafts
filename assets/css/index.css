@@ -213,8 +213,9 @@ body {
 
 /* ----------header-seller-btn-------- */
 .seller-btn{
-  width: 198px;
-  padding: 15px 5px;
+  width: 15%;
+  overflow: hidden;
+  padding: 18px 5px;
   margin: 0 8px;
   overflow: hidden;
   text-align: center;
