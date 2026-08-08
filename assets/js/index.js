@@ -1,114 +1,164 @@
-console.log("Hello, Creazen Crafts...");
-
-// ------------------------------Search-Button----------------------------
 document.addEventListener('DOMContentLoaded', () => {
+  console.log("Creazen Crafts script initialized...");
+
+  // ---------------------------------------------
+  // Mobile Navigation Drawer Toggle
+  // ---------------------------------------------
+  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  const navMenuWrapper = document.getElementById('navMenuWrapper');
+  const navBackdrop = document.getElementById('navBackdrop');
+  const dropdownLi = document.querySelector('.dropdown');
+
+  function toggleMobileMenu() {
+    const isOpen = navMenuWrapper.classList.contains('open');
+    if (isOpen) {
+      closeMobileMenu();
+    } else {
+      openMobileMenu();
+    }
+  }
+
+  function openMobileMenu() {
+    mobileMenuBtn?.classList.add('active');
+    navMenuWrapper?.classList.add('open');
+    navBackdrop?.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMobileMenu() {
+    mobileMenuBtn?.classList.remove('active');
+    navMenuWrapper?.classList.remove('open');
+    navBackdrop?.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  if (mobileMenuBtn) {
+    mobileMenuBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleMobileMenu();
+    });
+  }
+
+  if (navBackdrop) {
+    navBackdrop.addEventListener('click', closeMobileMenu);
+  }
+
+  // Handle mobile accordion toggle for Category dropdown
+  if (dropdownLi) {
+    const categoryLink = dropdownLi.querySelector('.category');
+    if (categoryLink) {
+      categoryLink.addEventListener('click', (e) => {
+        if (window.innerWidth <= 992) {
+          e.preventDefault();
+          dropdownLi.classList.toggle('active');
+        }
+      });
+    }
+  }
+
+  // Close mobile drawer on ESC key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && navMenuWrapper?.classList.contains('open')) {
+      closeMobileMenu();
+    }
+  });
+
+  // ---------------------------------------------
+  // Search Bar Functionality
+  // ---------------------------------------------
   const searchInput = document.querySelector('.search-input');
   const searchButton = document.querySelector('.search-button');
-  const dropdown = document.querySelector('.dropdown');
 
-  // Handle search button click
-  searchButton.addEventListener('click', () => {
+  if (searchButton && searchInput) {
+    searchButton.addEventListener('click', () => {
       const query = searchInput.value.trim();
       if (query) {
-          console.log(`Searching for: ${query}`);
-          // Add your search logic here (e.g., API call, redirect, etc.)
-      } else {
-          console.log('Please enter a search query.');
+        window.location.href = `./src/catagory.html?search=${encodeURIComponent(query)}`;
       }
-  });
+    });
 
-  // Handle Enter key press in the input field
-  searchInput.addEventListener('keypress', (e) => {
+    searchInput.addEventListener('keypress', (e) => {
       if (e.key === 'Enter') {
-          searchButton.click();
+        searchButton.click();
       }
-  });
+    });
+  }
 
-  // Handle dropdown click (for demo purposes, just logging)
-  dropdown.addEventListener('click', () => {
-      console.log('Dropdown clicked! Add your dropdown logic here.');
-      // You can add logic to show/hide a dropdown menu here
-  });
-});
+  // ---------------------------------------------
+  // Auth Pill Active State Handler
+  // ---------------------------------------------
+  const toggleLinks = document.querySelectorAll('.toggle-bar a');
+  const currentPath = window.location.pathname;
 
-
-// -----------------------------toogle-button-------------------------------------------
-// JavaScript to toggle the active state without preventing navigation
-
-const toggleLinks = document.querySelectorAll('.toggle-bar a');
-
-// Check the current URL to set the active state on page load
-const currentPath = window.location.pathname;
-toggleLinks.forEach(link => {
+  toggleLinks.forEach(link => {
     const linkPath = link.getAttribute('href');
-    if (currentPath.includes(linkPath)) {
-        toggleLinks.forEach(l => l.classList.remove('active'));
-        link.classList.add('active');
+    if (linkPath && currentPath.includes(linkPath)) {
+      toggleLinks.forEach(l => l.classList.remove('active'));
+      link.classList.add('active');
     }
 
-    // Add click event to update active state before navigation
     link.addEventListener('click', function() {
-        toggleLinks.forEach(l => l.classList.remove('active'));
-        this.classList.add('active');
-        // Navigation happens naturally via the href
+      toggleLinks.forEach(l => l.classList.remove('active'));
+      this.classList.add('active');
     });
-});
-
-
-// ------------Drop-------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//----------------------------Section-1: hero - swipper----------------------------
-var swiper = new Swiper(".mySwiper", {
-    spaceBetween: 30,
-    centeredSlides: true,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
   });
 
-
-//----------------------------Section-2: Video Grid ----------------------------
-const videos = document.querySelectorAll('.video');
-function pauseAllVideos() {
-    videos.forEach((video) => {
-        video.pause();
+  // ---------------------------------------------
+  // Hero Swiper Carousel Initialization
+  // ---------------------------------------------
+  if (document.querySelector('.mySwiper')) {
+    new Swiper('.mySwiper', {
+      spaceBetween: 0,
+      centeredSlides: true,
+      loop: true,
+      autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      speed: 800,
     });
-}//to pause all the video
+  }
 
-function playVideoOnHover(event) {
-    pauseAllVideos();
-    event.currentTarget.querySelector('.video').play();
-}
+  // ---------------------------------------------
+  // Interactive Video Section Playback
+  // ---------------------------------------------
+  const videoWrappers = document.querySelectorAll('.video-wrapper');
 
-document.querySelectorAll('.video-wrapper').forEach((wrapper) => {
-    wrapper.addEventListener('mouseover', playVideoOnHover);
+  function pauseAllVideos() {
+    videoWrappers.forEach((wrapper) => {
+      const video = wrapper.querySelector('.video');
+      if (video && !video.paused) {
+        video.pause();
+      }
+    });
+  }
+
+  videoWrappers.forEach((wrapper) => {
+    const video = wrapper.querySelector('.video');
+    if (!video) return;
+
+    // Hover effect for desktop
+    wrapper.addEventListener('mouseenter', () => {
+      pauseAllVideos();
+      video.play().catch(err => console.log('Autoplay prevented:', err));
+    });
 
     wrapper.addEventListener('mouseleave', () => {
-        wrapper.querySelector('.video').pause();
+      video.pause();
     });
-});
+
+    // Touch support for mobile devices
+    wrapper.addEventListener('click', () => {
+      if (video.paused) {
+        pauseAllVideos();
+        video.play().catch(err => console.log('Autoplay prevented:', err));
+      } else {
+        video.pause();
+      }
+    });
+  });
+});

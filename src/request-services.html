@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Request Custom Services . Creazen Crafts</title>
+  <link rel="icon" type="image/x-icon" href="../assets/icons/favicon-main.ico" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" />
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/index.css" />
+  <style>
+    .service-req-hero {
+      background: linear-gradient(135deg, var(--bg-dark) 0%, #2a2d3d 100%);
+      color: #ffffff;
+      padding: 60px 24px;
+      text-align: center;
+    }
+
+    .service-req-hero h1 {
+      color: #ffffff;
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 12px;
+    }
+
+    .service-req-hero p {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 1.1rem;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .req-container {
+      max-width: 900px;
+      margin: -40px auto 80px auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .req-card {
+      background: var(--bg-surface);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--border-color);
+    }
+
+    .service-options-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin: 20px 0 30px 0;
+    }
+
+    .service-type-card {
+      border: 1.5px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      text-align: center;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+
+    .service-type-card input {
+      display: none;
+    }
+
+    .service-type-card:hover,
+    .service-type-card.active {
+      border-color: var(--primary);
+      background: var(--primary-light);
+    }
+
+    .service-type-card i {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+
+    .service-type-card h4 {
+      font-size: 1rem;
+      margin-bottom: 4px;
+    }
+
+    .service-type-card p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    @media (max-width: 768px) {
+      .service-options-grid {
+        grid-template-columns: 1fr;
+      }
+      .req-card {
+        padding: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header-index">
+    <nav class="main-nav">
+      <div class="logo">
+        <a href="../index.html"><img src="../assets/images/logos/creazen-parent-logo.png" alt="Creazen Crafts Logo" /></a>
+      </div>
+
+      <div class="search-bar-container">
+        <input type="text" class="search-input" placeholder="Search for handmade crafts, gifts & more..." aria-label="Search crafts" />
+        <button class="search-button" aria-label="Search">
+          <span class="search-icon"><i class="fa fa-solid fa-magnifying-glass"></i></span>
+        </button>
+      </div>
+
+      <div class="nav-menu-wrapper" id="navMenuWrapper">
+        <div class="menu">
+          <nav class="navbar">
+            <ul>
+              <li><a href="../index.html">Home</a></li>
+              <li class="dropdown">
+                <a href="#" class="category">
+                  Category
+                  <i class="fa-solid fa-caret-down c-down"></i>
+                </a>
+                <div class="dropdown-menu">
+                  <a href="./catagory.html">Wedding Invitation</a>
+                  <a href="./catagory.html">Ring Ceremony Platter</a>
+                  <a href="./catagory.html">Hamper Baskets</a>
+                  <a href="./catagory.html">Trunk Boxes</a>
+                  <a href="./catagory.html">Floral Jewellery</a>
+                </div>
+              </li>
+              <li><a href="./about-us.html" class="about-us">About Us</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="mobile-drawer-only-actions">
+          <div class="seller-btn">
+            <a href="./become-partner.html" class="become-seller"><i class="fa-solid fa-handshake-angle"></i><span> Become a Seller</span></a>
+          </div>
+          <div class="drawer-user-profile-card" id="drawerUserProfileCard"></div>
+        </div>
+      </div>
+
+      <div class="header-right-actions">
+        <div class="seller-btn desktop-seller-btn">
+          <a href="./become-partner.html" class="become-seller"><i class="fa-solid fa-handshake-angle"></i><span> Become a Seller</span></a>
+        </div>
+
+        <button class="header-cart-btn header-cart-trigger" id="headerCartBtn" aria-label="Open Shopping Bag">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-badge-val">0</span>
+        </button>
+
+        <div class="toggle-container">
+          <div class="toggle-bar">
+            <a href="./login.html" class="log-in">Log in</a>
+            <a href="./signup.html" class="sign-up active">Sign up</a>
+          </div>
+        </div>
+
+        <button class="mobile-hamburger" id="mobileMenuBtn" aria-label="Toggle Navigation Menu">
+          <i class="fa-solid fa-bars icon-bars"></i>
+          <i class="fa-solid fa-xmark icon-close"></i>
+        </button>
+      </div>
+    </nav>
+    <div class="nav-backdrop" id="navBackdrop"></div>
+  </header>
+
+  <section class="service-req-hero">
+    <h1>Custom Craft Services & Orders</h1>
+    <p>Have a unique vision? Our master artisans craft bespoke invitations, hampers, and event favors tailored exclusively to your celebrations.</p>
+  </section>
+
+  <main class="req-container">
+    <div class="req-card">
+      <h3>Select Service Category</h3>
+      <div class="service-options-grid">
+        <label class="service-type-card active">
+          <input type="radio" name="srvCategory" value="custom-wedding" checked>
+          <i class="fa-solid fa-envelope-open-text"></i>
+          <h4>Bespoke Weddings</h4>
+          <p>Custom invitations, platters & favors</p>
+        </label>
+        <label class="service-type-card">
+          <input type="radio" name="srvCategory" value="bulk-gifting">
+          <i class="fa-solid fa-gift"></i>
+          <h4>Bulk Corporate Gifts</h4>
+          <p>Artisan hampers with custom branding</p>
+        </label>
+        <label class="service-type-card">
+          <input type="radio" name="srvCategory" value="decor-workshop">
+          <i class="fa-solid fa-palette"></i>
+          <h4>Workshops & Consult</h4>
+          <p>Live craft workshops & DIY kits</p>
+        </label>
+      </div>
+
+      <form class="form-grid" id="serviceRequestForm">
+        <div class="form-group">
+          <label>Your Full Name *</label>
+          <input type="text" id="reqName" placeholder="e.g. Rahul Kapoor" required />
+        </div>
+
+        <div class="form-group">
+          <label>Phone / WhatsApp *</label>
+          <input type="tel" id="reqPhone" placeholder="+91 98765 43210" required />
+        </div>
+
+        <div class="form-group">
+          <label>Email Address *</label>
+          <input type="email" id="reqEmail" placeholder="rahul@example.com" required />
+        </div>
+
+        <div class="form-group">
+          <label>Estimated Quantity / Units</label>
+          <select id="reqQty">
+            <option value="50">1 - 50 units</option>
+            <option value="200">50 - 200 units</option>
+            <option value="500">200 - 500+ units</option>
+          </select>
+        </div>
+
+        <div class="form-group full-width">
+          <label>Describe Your Custom Vision & Requirements *</label>
+          <textarea id="reqDesc" rows="4" placeholder="Tell us about your event theme, color palette, preferred materials, and any special requests..." required></textarea>
+        </div>
+
+        <div class="form-group full-width">
+          <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; padding: 14px;">
+            Submit Custom Request <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <!-- footer -->
+  <footer id="Footer">
+    <div id="footer-middle-line"></div>
+    <div class="footer-container">
+      <div class="footer-more-info-container">
+        <div class="more-info-list-item">
+          <h2>Products</h2>
+          <ul>
+            <a href="../src/catagory.html"><li>Wedding Invitation</li></a>
+            <a href="../src/catagory.html"><li>Ring Ceremony Platter</li></a>
+            <a href="../src/catagory.html"><li>Hamper Baskets</li></a>
+          </ul>
+        </div>
+
+        <div class="more-info-list-item">
+          <h2>Services</h2>
+          <ul>
+            <a href="../src/request-services.html"><li>Custom Orders</li></a>
+            <a href="../src/request-services.html"><li>Corporate Hampers</li></a>
+          </ul>
+        </div>
+
+        <div class="more-info-list-item">
+          <h2>More Information</h2>
+          <ul>
+            <a href="../src/contact.html"><li>Contact us</li></a>
+            <a href="../src/become-partner.html"><li>Become a Seller</li></a>
+            <a href="../src/about-us.html"><li>About us</li></a>
+          </ul>
+        </div>
+      </div>
+
+      <div id="footer-middle-line"></div>
+
+      <div class="footer-last-container">
+        <div class="footer-last-content">
+          <img src="../assets/images/logos/creazen-parent-logo-whitebg.png" />
+          <p>©️ 2025 Creazen Crafts. All Rights Reserved</p>
+        </div>
+
+        <div class="social-icon-container">
+          <a href="#"><span><i class="fa-brands fa-instagram fa-xl"></i></span></a>
+          <a href="#"><span><i class="fa-brands fa-facebook fa-xl"></i></span></a>
+          <a href="#"><span><i class="fa-brands fa-x fa-xl"></i></span></a>
+          <a href="#"><span><i class="fa-brands fa-linkedin fa-xl"></i></span></a>
+          <a href="mailto:creazen@gmail.com"><span><i class="fa-solid fa-envelope fa-xl"></i></span></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/cart.js"></script>
+  <script src="../assets/js/auth.js"></script>
+  <script src="../assets/js/index.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const cards = document.querySelectorAll('.service-type-card');
+      cards.forEach(card => {
+        card.addEventListener('click', () => {
+          cards.forEach(c => c.classList.remove('active'));
+          card.classList.add('active');
+        });
+      });
+
+      const form = document.getElementById('serviceRequestForm');
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const name = document.getElementById('reqName').value;
+          if (window.CreazenCart) {
+            window.CreazenCart.showToast(`Thank you, ${name}! Your custom craft request has been sent. We will contact you shortly! ✨`, 'success');
+          }
+          form.reset();
+        });
+      }
+    });
+  </script>
+</body>
+</html>

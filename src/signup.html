@@ -4,62 +4,57 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sign up</title>
-  <link rel="stylesheet" href="../assets/css/singup.css" />
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  <!-- fiirebase -->
-  
+  <title>Sign up . Creazen Crafts</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" />
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/login.css" />
 </head>
 
-<body>
+<body class="poppins">
   <div class="container">
     <div class="inner-container">
       <div class="left-container">
         <div class="img-overs-container">
-          <img class="img-bg" src="../assets/images/login/img2.jpg" />
-          <div class="text-logo"></div>
+          <img class="img-bg" src="../assets/images/services/service-3.jpg" alt="Join Creazen Crafts" />
         </div>
       </div>
 
       <div class="right-container poppins">
-        <div class="right-inner">
-          <div class="p-bar">
-            <!-- Alternate-Best Way -->
-            <img src="../assets/images/logos/creazen-parent-logo.png" />
+        <div class="log-nav">
+          <div class="title-right">
+            <div class="log-title">Create Account</div>
           </div>
-
-          <div class="create-ac">Create a Account</div>
-          <div class="sub-line">
-            Enter your details below to create your Account and get started
+          <div class="logo-hiremi">
+            <a href="../index.html"><img src="../assets/images/logos/creazen-parent-logo.png" alt="Creazen Crafts Logo" /></a>
           </div>
+        </div>
 
-          <div class="signup-container">
+        <div class="login-container">
+          <form class="login-form" id="signup-form">
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" placeholder="e.g. Priya Patel" required />
 
-            <form class="signup-form" id="signup-form">
-              
-              <label for="password">Email<span class="astrisk">*</span></label></label>
-              <div class="password-container">
-                <input class="signup-form-input-f" type="email" id="email" placeholder="xyz@email.com" required>
-              </div>
+            <label for="email">Email address *</label>
+            <input type="email" id="email" placeholder="priya@example.com" required />
 
-              <label for="password">Enter Password<span class="astrisk">*</span></label></label>
-              <div class="password-container">
-                <input class="signup-form-input-f" type="password" id="password" placeholder="******" required>
-              </div>
+            <label for="password">Create Password *</label>
+            <input type="password" id="password" placeholder="At least 6 characters" required minlength="6" />
 
+            <div class="btn-position">
+              <button type="submit" class="login-btn" id="submitBtn">Create My Account</button>
+            </div>
 
-              <div class="buttons">
-                <!-- <a class="continue-btn-anc" href="otp-pannel.html">Continue</a> -->
-                <button id="submit" class="continue-btn">Continue</button>
-                <a href="./login.html" class="back-btn">Already have an account?</a>
-              </div>
-            </form>
-          </div>
+            <p class="signup-text">
+              Already have an account? <a href="./login.html">Log in</a>
+            </p>
+          </form>
         </div>
       </div>
     </div>
   </div>
-  <!-- Link your separate JS file as a module -->
-  <script type="module" src="../assets/js/signup.js"></script>
+
+  <script src="../assets/js/cart.js"></script>
+  <script src="../assets/js/auth.js"></script>
+  <script src="../assets/js/signup.js"></script>
 </body>
 </html>

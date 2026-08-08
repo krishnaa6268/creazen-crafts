@@ -44,37 +44,23 @@
   </head>
   <body>
     <header class="header-index">
-      <nav>
-        <div class="logo-seach">
-          <div class="logo">
-            <a href="index.html"
-              ><img
-                src="./assets/images/logos/creazen-parent-logo.png"
-                alt="creazen-logo"
-            /></a>
-          </div>
-          <div class="search-bar-container">
-            <input
-              type="text"
-              class="search-input"
-              placeholder="Search for products, items & more..."
-            />
-            <button class="search-button">
-              <span class="search-icon"
-                ><i class="fa fa-solid fa-magnifying-glass"></i
-              ></span>
-            </button>
-          </div>
+      <nav class="main-nav">
+        <div class="logo">
+          <a href="index.html"><img src="./assets/images/logos/creazen-parent-logo.png" alt="Creazen Crafts Logo" /></a>
+        </div>
+
+        <div class="search-bar-container">
+          <input type="text" class="search-input" placeholder="Search for handmade crafts, gifts & more..." aria-label="Search crafts" />
+          <button class="search-button" aria-label="Search"><span class="search-icon"><i class="fa fa-solid fa-magnifying-glass"></i></span></button>
+        </div>
+
+        <div class="nav-menu-wrapper" id="navMenuWrapper">
           <div class="menu">
             <nav class="navbar">
               <ul>
-                <li><a href="./index.html">Home</a></li>
+                <li><a href="./index.html" class="active">Home</a></li>
                 <li class="dropdown">
-                  <a href="#" class="category">
-                    Category
-                    <i class="fa-solid fa-caret-down c-down"></i>
-                    <i class="fa-solid fa-caret-up c-up"></i>
-                  </a>
+                  <a href="#" class="category">Category <i class="fa-solid fa-caret-down c-down"></i></a>
                   <div class="dropdown-menu">
                     <a href="./src/catagory.html">Wedding Invitation</a>
                     <a href="./src/catagory.html">Ring Ceremony Platter</a>
@@ -87,29 +73,43 @@
                     <a href="./src/catagory.html">Wedding Return Favours</a>
                   </div>
                 </li>
-                <li>
-                  <a href="./src/about-us.html" class="about-us"> About Us</a>
-                </li>
+                <li><a href="./src/about-us.html" class="about-us">About Us</a></li>
               </ul>
             </nav>
           </div>
-        </div>
-        <div class="seller-btn">
-          <a href="./src/become-partner.html" class="become-seller"
-            ><i class="fa-solid fa-handshake-angle"></i
-            ><span> Become a Seller</span></a
-          >
-        </div>
-        <!-- <div class="credential">
-        <a href="./src/about.html" class="become-seller"><i class="fa-solid fa-user-tie fa-xl"></i>Account</a>
-      </div> -->
-        <div class="toggle-container">
-          <div class="toggle-bar">
-            <a href="./src/login.html" class="log-in">Log in</a>
-            <a href="./src/signup.html" class="sign-up active">Sign up</a>
+
+          <div class="mobile-drawer-only-actions">
+            <div class="seller-btn">
+              <a href="./src/become-partner.html" class="become-seller"><i class="fa-solid fa-handshake-angle"></i><span> Become a Seller</span></a>
+            </div>
+            <div class="drawer-user-profile-card" id="drawerUserProfileCard"></div>
           </div>
         </div>
+
+        <div class="header-right-actions">
+          <div class="seller-btn desktop-seller-btn">
+            <a href="./src/become-partner.html" class="become-seller"><i class="fa-solid fa-handshake-angle"></i><span> Become a Seller</span></a>
+          </div>
+
+          <button class="header-cart-btn header-cart-trigger" id="headerCartBtn" aria-label="Open Shopping Bag">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span class="cart-badge-val">0</span>
+          </button>
+
+          <div class="toggle-container">
+            <div class="toggle-bar">
+              <a href="./src/login.html" class="log-in">Log in</a>
+              <a href="./src/signup.html" class="sign-up active">Sign up</a>
+            </div>
+          </div>
+
+          <button class="mobile-hamburger" id="mobileMenuBtn" aria-label="Toggle Navigation Menu">
+            <i class="fa-solid fa-bars icon-bars"></i>
+            <i class="fa-solid fa-xmark icon-close"></i>
+          </button>
+        </div>
       </nav>
+      <div class="nav-backdrop" id="navBackdrop"></div>
     </header>
 
     <!-- -------------Section:1-hero----------- -->
@@ -162,10 +162,12 @@
             src="./assets/videos/art-paper.mp4"
             muted
             loop
+            playsinline
           ></video>
 
           <div class="overlay">
-            <h1>Your visionary Partner in Handmade Crafts</h1>
+            <div class="video-play-badge"><i class="fa-solid fa-play"></i></div>
+            <h1>Your Visionary Partner in Handmade Crafts</h1>
             <div class="overlay-text">
               <p>
                 Bringing imagination to life with personalized, handcrafted
@@ -181,8 +183,10 @@
             src="./assets/videos/buke-love.mp4"
             muted
             loop
+            playsinline
           ></video>
           <div class="overlay">
+            <div class="video-play-badge"><i class="fa-solid fa-play"></i></div>
             <h1>Create Beyond Boundaries</h1>
             <div class="overlay-text">
               <p>
@@ -199,8 +203,10 @@
             src="./assets/videos/paint-women.mp4"
             muted
             loop
+            playsinline
           ></video>
           <div class="overlay">
+            <div class="video-play-badge"><i class="fa-solid fa-play"></i></div>
             <h1>Accelerating Expression</h1>
             <div class="overlay-text">
               <p>
@@ -217,12 +223,14 @@
             src="./assets/videos/sewing.mp4"
             muted
             loop
+            playsinline
           ></video>
           <div class="overlay">
+            <div class="video-play-badge"><i class="fa-solid fa-play"></i></div>
             <h1>Connecting Tomorrow, Today</h1>
             <div class="overlay-text">
               <p>
-                Breaking creative boundaries with innovative your designs that
+                Breaking creative boundaries with innovative designs that
                 turn imagination into reality.
               </p>
             </div>
@@ -231,58 +239,60 @@
       </div>
     </section>
 
-    <!-- -------------Section:3-Content----------- -->
-    <section></section>
-
     <!-- -------------Section:4-Services----------- -->
     <section id="Services">
       <div class="service-container">
         <div class="services-heading">
+          <span class="section-tag">OUR SPECIALTIES</span>
           <h1>What We Offer</h1>
           <h2>Designed to make every moment special.</h2>
         </div>
         <div class="service-container-content">
-          <a href="./src/request-services.html">
+          <a href="./src/request-services.html" class="service-card-link">
             <div class="service-img-container">
               <img
                 src="./assets/images/services/service-1.jpg"
-                alt="service-image"
+                alt="Personalized Crafts"
               />
               <div class="service-overlay">
                 <p>Personalized Crafts</p>
+                <span class="card-arrow"><i class="fa-solid fa-arrow-right"></i></span>
               </div>
             </div>
           </a>
-          <a href="./src/catagory.html">
+          <a href="./src/catagory.html" class="service-card-link">
             <div class="service-img-container">
               <img
                 src="./assets/images/services/service-3.jpg"
-                alt="service-image"
+                alt="Festive & Seasonal Craft Items"
               />
               <div class="service-overlay">
                 <p>Festive & Seasonal Craft Items</p>
+                <span class="card-arrow"><i class="fa-solid fa-arrow-right"></i></span>
               </div>
             </div>
           </a>
-          <a href="#">
+          <a href="./src/request-services.html" class="service-card-link">
             <div class="service-img-container">
               <img
                 src="./assets/images/services/service-2.jpg"
-                alt="service-image"
+                alt="Business & Bulk Orders"
               />
               <div class="service-overlay">
                 <p>Business & Bulk Orders</p>
+                <span class="card-arrow"><i class="fa-solid fa-arrow-right"></i></span>
               </div>
             </div>
           </a>
-          <a href="#">
+          <a href="./src/request-services.html" class="service-card-link">
             <div class="service-img-container">
               <img
                 src="./assets/images/services/service-4.jpg"
-                alt="service-image"
+                alt="Workshops & Tutorials"
               />
               <div class="service-overlay">
                 <p>Workshops & Tutorials</p>
+                <span class="card-arrow"><i class="fa-solid fa-arrow-right"></i></span>
               </div>
             </div>
           </a>
@@ -430,6 +440,8 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./assets/js/cart.js"></script>
+    <script src="./assets/js/auth.js"></script>
     <script src="./assets/js/index.js"></script>
   </body>
 </html>

@@ -31,139 +31,101 @@
     </head>
     <body>
         <header class="header-index">
-            <nav>
-                <div class="logo-seach">
-                    <div class="logo"><a href="../index.html"><img
-                                src="../assets/images/logos/creazen-parent-logo.png"
-                                alt="creazen-logo"></a> </div>
-                    <div class="search-bar-container">
-                        <input type="text" class="search-input"
-                            placeholder="Search for products, items & more...">
-                        <button class="search-button">
-                            <span class="search-icon"><i
-                                    class="fa fa-solid fa-magnifying-glass"></i></span>
-                        </button>
-                    </div>
+            <nav class="main-nav">
+                <div class="logo">
+                    <a href="../index.html"><img src="../assets/images/logos/creazen-parent-logo.png" alt="Creazen Crafts Logo"></a>
+                </div>
+
+                <div class="search-bar-container">
+                    <input type="text" class="search-input" placeholder="Search for handmade crafts, gifts & more..." aria-label="Search crafts">
+                    <button class="search-button" aria-label="Search">
+                        <span class="search-icon"><i class="fa fa-solid fa-magnifying-glass"></i></span>
+                    </button>
+                </div>
+
+                <div class="nav-menu-wrapper" id="navMenuWrapper">
                     <div class="menu">
                         <nav class="navbar">
                             <ul>
                                 <li><a href="../index.html">Home</a></li>
                                 <li class="dropdown">
-                                    <a href="#" class="category">
+                                    <a href="#" class="category active">
                                         Category
                                         <i class="fa-solid fa-caret-down c-down"></i>
-                                        <i class="fa-solid fa-caret-up c-up"></i>
                                     </a>
-                                    <div class="dropdown-menu">
-                                        <a href="../src/catagory.html">Wedding Invitation</a>
-                                        <a href="../src/catagory.html">Ring Ceremony Platter</a>
-                                        <a href="../src/catagory.html">Hamper Baskets</a>
-                                        <a href="../src/catagory.html">Trunk Boxes</a>
-                                        <a href="../src/catagory.html">Floral Jewellery</a>
-                                        <a href="../src/catagory.html">Souvenir Spiritual Gifts</a>
-                                        <a href="../src/catagory.html">Unicorn Lovers</a>
-                                        <a href="../src/catagory.html">Gifts for Him/Her</a>
-                                        <a href="../src/catagory.html">Wedding Return Favours</a>
-                                    </div>
+                                     <div class="dropdown-menu">
+                                        <a href="./catagory.html">Wedding Invitation</a>
+                                        <a href="./catagory.html">Ring Ceremony Platter</a>
+                                        <a href="./catagory.html">Hamper Baskets</a>
+                                        <a href="./catagory.html">Trunk Boxes</a>
+                                        <a href="./catagory.html">Floral Jewellery</a>
+                                        <a href="./catagory.html">Souvenir Spiritual Gifts</a>
+                                        <a href="./catagory.html">Unicorn Lovers</a>
+                                        <a href="./catagory.html">Gifts for Him/Her</a>
+                                        <a href="./catagory.html">Wedding Return Favours</a>
+                                     </div>
                                 </li>
-                                <li><a href="../src/about-us.html" class="about-us">
-                                    About Us</a></li>
+                                <li><a href="./about-us.html" class="about-us">About Us</a></li>
                             </ul>
                         </nav>                      
                     </div>
-                </div>
-                <div class="seller-btn">
-                    <a href="../src/become-partner.html" class="become-seller"><i
-                            class="fa-solid fa-handshake-angle"></i><span>
-                            Become a Seller</span></a>
-                </div>
-                <!-- <div class="credential">
-        <a href="./src/about.html" class="become-seller"><i class="fa-solid fa-user-tie fa-xl"></i>Account</a>
-      </div> -->
-                <div class="toggle-container">
-                    <div class="toggle-bar">
-                        <a href="../src/login.html" class="log-in">Log in</a>
-                        <a href="../src/signup.html" class="sign-up active">Sign
-                            up</a>
+
+                    <div class="mobile-drawer-only-actions">
+                        <div class="seller-btn">
+                            <a href="./become-partner.html" class="become-seller"><i class="fa-solid fa-handshake-angle"></i><span> Become a Seller</span></a>
+                        </div>
+                        <div class="drawer-user-profile-card" id="drawerUserProfileCard"></div>
                     </div>
                 </div>
+
+                <div class="header-right-actions">
+                    <div class="seller-btn desktop-seller-btn">
+                        <a href="./become-partner.html" class="become-seller"><i class="fa-solid fa-handshake-angle"></i><span> Become a Seller</span></a>
+                    </div>
+
+                    <button class="header-cart-btn header-cart-trigger" id="headerCartBtn" aria-label="Open Shopping Bag">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span class="cart-badge-val">0</span>
+                    </button>
+
+                    <div class="toggle-container">
+                        <div class="toggle-bar">
+                            <a href="./login.html" class="log-in">Log in</a>
+                            <a href="./signup.html" class="sign-up active">Sign up</a>
+                        </div>
+                    </div>
+
+                    <button class="mobile-hamburger" id="mobileMenuBtn" aria-label="Toggle Navigation Menu">
+                        <i class="fa-solid fa-bars icon-bars"></i>
+                        <i class="fa-solid fa-xmark icon-close"></i>
+                    </button>
+                </div>
+            </nav>
+            <div class="nav-backdrop" id="navBackdrop"></div>
+        </header>
+
+        <section class="catalog-page-header">
+            <h1 id="category-title">Wedding Invitations</h1>
+            <p class="catalog-subtitle">Explore our handcrafted creations customized for your special moments.</p>
+        </section>
+
+        <header class="header-2">
+            <nav>
+              <ul>
+                <li><a href="#" class="active" onclick="showCategory('wedding-invitation'); return false;">Wedding Invitation</a></li>
+                <li><a href="#" onclick="showCategory('ring-ceremony'); return false;">Ring Ceremony Platter</a></li>
+                <li><a href="#" onclick="showCategory('hamper-baskets'); return false;">Hamper Baskets</a></li>
+                <li><a href="#" onclick="showCategory('trunk-boxes'); return false;">Trunk Boxes</a></li>
+                <li><a href="#" onclick="showCategory('floral-jewellery'); return false;">Floral Jewellery</a></li>
+              </ul>
             </nav>
         </header>
 
-        <!-- -------------Section:1-hero----------- -->
-      
-
-        <header class=".header-2">
-            <nav>
-              <ul>
-                <li><a href="#" onclick="showCategory('wedding-invitation')">Wedding Invitation</a></li>
-                <li><a href="#" onclick="showCategory('ring-ceremony')">Ring Ceremony</a></li>
-                <li><a href="#" onclick="showCategory('hamper-baskets')">Hamper Baskets</a></li>
-                <li><a href="#" onclick="showCategory('trunk-boxes')">Trunk Boxes</a></li>
-                <li><a href="#" onclick="showCategory('floral-jewellery')">Floral Jewellery</a></li>
-                <li><a href="#" onclick="showCategory('souvenir-gifts')">Souvenir Gifts</a></li>
-                <li><a href="#" onclick="showCategory('unicorn-lovers')">Unicorn Lovers</a></li>
-                <li><a href="#" onclick="showCategory('gifts-him-her')">Gifts for Him/Her</a></li>
-                <li><a href="#" onclick="showCategory('wedding-return')">Wedding Return Favours</a></li>
-              </ul>
-            </nav>
-          </header>
-
-
-        <main>
-            <!-- Category title and items -->
-            <h2 id="category-title">Please select a category</h2>
+        <main class="catalog-container">
             <div id="items"></div>
-        
-            <!-- Cart Button -->
-            <div class="cart-btn" id="cart-container">
-              <button id="view-cart-btn" onclick="showCart()">View Cart</button>
-            </div>
-        
-            <!-- Cart Section -->
-            <div id="cart-modal" style="display:none;">
-              <h2>Your Cart</h2>
-              <div id="cart-items"></div>
-              <div id="total-price">
-                <p>Subtotal: ₹<span id="subtotal">0</span></p>
-                <p>Discount: ₹<span id="discount">0</span></p>
-                <p>Total Amount: ₹<span id="total-amount">0</span></p>
-              </div>
-              <button onclick="showDeliveryForm()">Proceed to Delivery</button>
-              <button onclick="closeCart()">Close</button>
-            </div>
-        
-            <!-- Delivery Form -->
-            <div id="delivery-form" style="display:none;">
-              <h2>Enter Delivery Address</h2>
-              <form id="address-form">
-                <label for="name">Full Name:</label>
-                <input type="text" id="name" required><br>
-                <label for="address">Address:</label>
-                <textarea id="address" required></textarea><br>
-                <label for="city">City:</label>
-                <input type="text" id="city" required><br>
-                <label for="zip">Zip Code:</label>
-                <input type="text" id="zip" required><br>
-                <label for="phone">Phone Number:</label>
-                <input type="text" id="phone" required><br><br>
-                <button type="submit">Submit Address</button>
-              </form>
-            </div>
-        
-            <!-- Payment Page -->
-            <div id="payment-page" style="display:none;">
-              <h2>Payment</h2>
-              <p>Total Amount: ₹<span id="payment-total"></span></p>
-              <button onclick="processPayment()">Pay Now</button>
-              <button onclick="cancelPayment()">Cancel</button>
-            </div>
-          </main>
-
-
+        </main>
 
         <!-- -------------Section:-Footer----------- -->
-        <!-- footer -->
         <footer id="Footer">
             <div id="footer-middle-line"></div>
             <div class="footer-container">
@@ -171,90 +133,31 @@
                     <div class="more-info-list-item">
                         <h2>Products</h2>
                         <ul>
-                            <a href="#">
-                                <li>Wedding Invitation</li>
-                            </a>
-                            <a href="#">
-                                <li>Ring Ceremony Platter</li>
-                            </a>
-                            <a href="#">
-                                <li>Hamper Baskets</li>
-                            </a>
-                            <a href="#">
-                                <li>Trunk Boxes</li>
-                            </a>
-                            <a href="#">
-                                <li>Floral Jewellery</li>
-                            </a>
-                            <a href="#">
-                                <li>Souvenir Spritual Gifts</li>
-                            </a>
-                            <a href="#">
-                                <li>Unicorn Lovers</li>
-                            </a>
-                            <a href="#">
-                                <li>Gifts for Him/her</li>
-                            </a>
-                            <a href="#">
-                                <li>Wedding Return Favours</li>
-                            </a>
+                            <a href="../src/catagory.html"><li>Wedding Invitation</li></a>
+                            <a href="../src/catagory.html"><li>Ring Ceremony Platter</li></a>
+                            <a href="../src/catagory.html"><li>Hamper Baskets</li></a>
+                            <a href="../src/catagory.html"><li>Trunk Boxes</li></a>
+                            <a href="../src/catagory.html"><li>Floral Jewellery</li></a>
                         </ul>
                     </div>
 
                     <div class="more-info-list-item">
                         <h2>Services</h2>
                         <ul>
-                            <a href="#">
-                                <li>Custom Orders</li>
-                            </a>
-                            <a href="#">
-                                <li>Crafting Blog or Inspiration Hub</li>
-                            </a>
-                            <a href="#">
-                                <li>Gift Customization & Wrapping Services</li>
-                            </a>
-                            <a href="#">
-                                <li>Printable Craft Planners & Trackers</li>
-                            </a>
-                            <a href="#">
-                                <li>Eco-Friendly & Upcycling Section</li>
-                            </a>
-                            <a href="#">
-                                <li>DIY Home Decor Projects</li>
-                            </a>
-                            <a href="#">
-                                <li>Enterprises solution</li>
-                            </a>
-                            <a href="#">
-                                <li>Craft Mail Newsletter</li>
-                            </a>
+                            <a href="../src/request-services.html"><li>Custom Orders</li></a>
+                            <a href="../src/request-services.html"><li>Crafting Inspiration</li></a>
+                            <a href="../src/request-services.html"><li>Gift Wrapping Services</li></a>
                         </ul>
                     </div>
 
                     <div class="more-info-list-item">
                         <h2>More Information</h2>
                         <ul>
-                            <a href="../src/contact.html">
-                                <li>Contact us</li>
-                            </a>
-                            <a href="../src/become-partner.html">
-                                <li>Become a Seller</li>
-                            </a>
-                            <a href="../src/career-with-creazen.html">
-                                <li>Work with us</li>
-                            </a>
-                            <a href="../src/about-us.html">
-                                <li>About us </li>
-                            </a>
-                            <a href="../src/policy.html">
-                                <li>Privacy Policies</li>
-                            </a>
-                            <a href="mailto: creazen@gmail.com">
-                                <li>Support</li>
-                            </a>
-                            <a href="#">
-                                <li>Blogs</li>
-                            </a>
+                            <a href="../src/contact.html"><li>Contact us</li></a>
+                            <a href="../src/become-partner.html"><li>Become a Seller</li></a>
+                            <a href="../src/career-with-creazen.html"><li>Work with us</li></a>
+                            <a href="../src/about-us.html"><li>About us</li></a>
+                            <a href="../src/policy.html"><li>Privacy Policies</li></a>
                         </ul>
                     </div>
                 </div>
@@ -264,28 +167,23 @@
                 <div class="footer-last-container">
                     <div class="footer-last-content">
                         <img src="../assets/images/logos/creazen-parent-logo-whitebg.png">
-                        <p> ©️ 2025 Creazen Crafts. All Rights Reserved</p>
+                        <p>©️ 2025 Creazen Crafts. All Rights Reserved</p>
                     </div>
 
                     <div class="social-icon-container">
-                        <a href="#"><span><i
-                                    class="fa-brands fa-instagram fa-xl"></i></span></a>
-                        <a href="#"><span><i
-                                    class="fa-brands fa-facebook fa-xl"></i></span></a>
-                        <a href="#"><span><i
-                                    class="fa-brands fa-x fa-xl"></i></span></a>
-                        <a href="#"><span><i
-                                    class="fa-brands fa-linkedin fa-xl"></i></span></a>
-                                   
-                <a href="mailto: creazen@gmail.com"><span><i
-                                    class="fa-solid fa-envelope fa-xl"></i></span></a>               
+                        <a href="#"><span><i class="fa-brands fa-instagram fa-xl"></i></span></a>
+                        <a href="#"><span><i class="fa-brands fa-facebook fa-xl"></i></span></a>
+                        <a href="#"><span><i class="fa-brands fa-x fa-xl"></i></span></a>
+                        <a href="#"><span><i class="fa-brands fa-linkedin fa-xl"></i></span></a>
+                        <a href="mailto:creazen@gmail.com"><span><i class="fa-solid fa-envelope fa-xl"></i></span></a>
                     </div>
                 </div>
             </div>
         </footer>
 
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-        <script src="../assets/js/catagory.js"></script>
+        <script src="../assets/js/cart.js"></script>
+        <script src="../assets/js/auth.js"></script>
         <script src="../assets/js/index.js"></script>
         <script src="../assets/js/catagory.js"></script>
     </body>

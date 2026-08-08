@@ -1,344 +1,198 @@
-// Cart management and adding items
-let cart = [];
+// ---------------------------------------------
+// Creazen Crafts - Category & Product Showcase JS
+// ---------------------------------------------
 
-// Dummy data for items (Updated URLs and Descriptions)
-// Dummy data for items (10 items for each category)
 const itemsData = {
   'wedding-invitation': [
     { 
-      name: 'Royal Invite', 
-      price: 500, 
-      rating: 4.5, 
-      description: 'An elegant and royal wedding invitation to leave a lasting impression.',
-      discount: 50, 
-      image: '../assets/images/page-imgages/dummy-img.jpg'
-    },
-    { 
-      name: 'Elegant Scroll', 
-      price: 600, 
-      rating: 4.7, 
-      description: 'A classic scroll invitation with beautiful calligraphy.',
-      discount: 60, 
-      image: '../assets/images/page-imgages/dummy-img.jpg'
-    },
-    { 
-      name: 'Classic Fold', 
-      price: 450, 
-      rating: 4.3, 
-      description: 'A simple yet elegant fold invitation with a personal touch.',
-      discount: 45, 
-      image: '../assets/images/page-imgages/dummy-img.jpg'
-    },
-    { 
-      name: 'Floral Touch', 
-      price: 550, 
-      rating: 4.6, 
-      description: 'A delicate wedding invitation with floral designs and vibrant colors.',
-      discount: 55, 
-      image: '../assets/images/page-imgages/dummy-img.jpg'
-    },
-    { 
-      name: 'Golden Charm', 
-      price: 700, 
-      rating: 5, 
-      description: 'A luxury gold-themed invitation with intricate patterns.',
-      discount: 70, 
-      image: '../assets/images/page-imgages/dummy-img.jpg'
-    },
-    { 
-      name: 'Peacock Elegance', 
-      price: 750, 
-      rating: 4.8, 
-      description: 'A peacock-inspired wedding invitation with a vibrant touch.',
-      discount: 75, 
-      image: '../assets/images/page-imgages/dummy-img.jpg'
-    },
-    { 
-      name: 'Velvet Royale', 
-      price: 800, 
+      id: 'wed-01',
+      name: 'Royal Heritage Gold Scroll Invite', 
+      price: 599, 
+      originalPrice: 1199,
       rating: 4.9, 
-      description: 'A velvet-textured wedding invitation with royal embellishments.',
-      discount: 80, 
-      image: '../assets/images/page-imgages/dummy-img.jpg'
+      category: 'Wedding Invitation',
+      description: 'An exquisite gold-embossed scroll wedding invitation packaged in a royal velvet box.',
+      discount: 600, 
+      image: '../assets/images/services/service-1.jpg'
     },
     { 
-      name: 'Silk Serenity', 
-      price: 950, 
-      rating: 4.7, 
-      description: 'A silk-based wedding invitation that radiates elegance.',
-      discount: 95, 
-      image: '../assets/images/page-imgages/dummy-img.jpg'
-    },
-    { 
-      name: 'Royal Scroll', 
+      id: 'wed-02',
+      name: 'Floral Laser-Cut Elegance Card', 
       price: 650, 
-      rating: 4.4, 
-      description: 'A scroll wedding invitation fit for royalty with an antique finish.',
-      discount: 65, 
-      image: '../assets/images/page-imgages/dummy-img.jpg'
+      originalPrice: 999,
+      rating: 4.8, 
+      category: 'Wedding Invitation',
+      description: 'Intricate floral laser-cut envelope card with gold foil monogram inserts.',
+      discount: 349, 
+      image: '../assets/images/services/service-3.jpg'
     },
     { 
-      name: 'Traditional Card', 
-      price: 400, 
-      rating: 4.2, 
-      description: 'A traditional paper-based wedding invitation with classic designs.',
-      discount: 40, 
-      image: '../assets/images/page-imgages/dummy-img.jpg'
+      id: 'wed-03',
+      name: 'Classic Vintage Envelope Set', 
+      price: 450, 
+      originalPrice: 750,
+      rating: 4.5, 
+      category: 'Wedding Invitation',
+      description: 'Handmade deckle-edge paper invitation sealed with custom wax stamp.',
+      discount: 300, 
+      image: '../assets/images/page-imgages/grid-1.jpg'
+    },
+    { 
+      id: 'wed-04',
+      name: 'Peacock Motif Luxury Box Invite', 
+      price: 850, 
+      originalPrice: 1499,
+      rating: 5.0, 
+      category: 'Wedding Invitation',
+      description: 'Hand-painted peacock artwork box invitation with dried flower petals.',
+      discount: 649, 
+      image: '../assets/images/page-imgages/grid-2.jpg'
     }
   ],
   
   'ring-ceremony': [
     { 
-      name: 'Gold Platter', 
-      price: 1000, 
-      rating: 4.6, 
-      description: 'A luxurious gold ring ceremony platter to celebrate your special occasion.',
-      discount: 100, 
-      image: '../assets/images/page-imgages/dummy-img.jpg'
-    },
-    { 
-      name: 'Silver Platter', 
-      price: 800, 
-      rating: 4.4, 
-      description: 'A beautiful silver platter for your ring ceremony.',
-      discount: 80, 
-      image: '../assets/images/page-imgages/dummy-img.jpg'
-    },
-    { 
-      name: 'Crystal Platters', 
+      id: 'ring-01',
+      name: 'Velvet Rose Gold Ring Platter', 
       price: 1200, 
-      rating: 4.8, 
-      description: 'Crystal platters that sparkle and shine during your ceremony.',
-      discount: 120, 
-      image: '../assets/images/page-imgages/dummy-img.jpg'
-    },
-    { 
-      name: 'Rosewood Platter', 
-      price: 900, 
-      rating: 4.5, 
-      description: 'Elegant rosewood platters with intricate carvings.',
-      discount: 90, 
-      image: '../assets/images/page-imgages/dummy-img.jpg'
-    },
-    { 
-      name: 'Marble Ring Holder', 
-      price: 1300, 
+      originalPrice: 1800,
       rating: 4.9, 
-      description: 'A luxurious marble holder for your rings.',
-      discount: 130, 
-      image: '../assets/images/page-imgages/dummy-img.jpg'
+      category: 'Ring Ceremony Platter',
+      description: 'Handcrafted plush velvet ring tray featuring pearl border and floral accent ring holders.',
+      discount: 600, 
+      image: '../assets/images/services/service-2.jpg'
     },
     { 
-      name: 'Luxury Wooden Ring Box', 
-      price: 1100, 
-      rating: 4.7, 
-      description: 'Handcrafted wooden ring box with velvet lining.',
-      discount: 110, 
-      image: '../assets/images/page-imgages/dummy-img.jpg'
-    },
-    { 
-      name: 'Elegant Crystal Vase', 
-      price: 750, 
-      rating: 4.3, 
-      description: 'A crystal vase perfect for your ring ceremony décor.',
-      discount: 75, 
-      image: '../assets/images/page-imgages/dummy-img.jpg'
-    },
-    { 
-      name: 'Golden Ring Stand', 
-      price: 1000, 
-      rating: 4.6, 
-      description: 'A golden stand to hold your precious rings.',
-      discount: 100, 
-      image: '../assets/images/page-imgages/dummy-img.jpg'
-    },
-    { 
-      name: 'Candlelit Holder', 
-      price: 850, 
-      rating: 4.4, 
-      description: 'A candle holder to add warmth and beauty to your ceremony.',
-      discount: 85, 
-      image: '../assets/images/page-imgages/dummy-img.jpg'
-    },
-    { 
-      name: 'Platinum Ring Box', 
-      price: 1500, 
-      rating: 4.9, 
-      description: 'A platinum box that will preserve your ring forever.',
-      discount: 150, 
-      image: '../assets/images/page-imgages/dummy-img.jpg'
+      id: 'ring-02',
+      name: 'Crystal Glass Dome Ring Tray', 
+      price: 1450, 
+      originalPrice: 2200,
+      rating: 5.0, 
+      category: 'Ring Ceremony Platter',
+      description: 'Luminous crystal glass dome ring display with LED fairy lighting.',
+      discount: 750, 
+      image: '../assets/images/services/service-3.jpg'
     }
   ],
-  
+
   'hamper-baskets': [
     { 
-      name: 'Luxury Fruit Basket', 
-      price: 500, 
-      rating: 4.5, 
-      description: 'A basket filled with a variety of fresh fruits and delicacies.',
-      discount: 50, 
-      image: '../assets/images/page-imgages/dummy-img.jpg'
-    },
-    { 
-      name: 'Spa Hamper', 
-      price: 800, 
-      rating: 4.7, 
-      description: 'A relaxing spa hamper with essential oils and skincare products.',
-      discount: 80, 
-      image: '../assets/images/page-imgages/dummy-img.jpg'
-    },
-    { 
-      name: 'Gourmet Basket', 
-      price: 650, 
-      rating: 4.3, 
-      description: 'A basket of hand-picked gourmet snacks and chocolates.',
-      discount: 65, 
-      image: '../assets/images/page-imgages/dummy-img.jpg'
-    },
-    { 
-      name: 'Chocolate Hamper', 
-      price: 550, 
-      rating: 4.6, 
-      description: 'A delectable hamper filled with premium chocolates.',
-      discount: 55, 
-      image: '../assets/images/page-imgages/dummy-img.jpg'
-    },
-    { 
-      name: 'Tea & Coffee Basket', 
-      price: 450, 
-      rating: 4.5, 
-      description: 'A basket filled with premium tea leaves and coffee beans.',
-      discount: 45, 
-      image: '../assets/images/page-imgages/dummy-img.jpg'
-    },
-    { 
-      name: 'Eco-friendly Hamper', 
-      price: 700, 
+      id: 'hamp-01',
+      name: 'Royal Gourmet Celebration Trunk', 
+      price: 1899, 
+      originalPrice: 2500,
       rating: 4.8, 
-      description: 'An eco-friendly hamper with organic products.',
-      discount: 70, 
-      image: '../assets/images/page-imgages/dummy-img.jpg'
+      category: 'Hamper Baskets',
+      description: 'Assorted premium artisan dry fruits, scented soy candle & handmade chocolate box.',
+      discount: 601, 
+      image: '../assets/images/services/service-4.jpg'
     },
     { 
-      name: 'Baby Care Hamper', 
-      price: 600, 
-      rating: 4.9, 
-      description: 'A gentle hamper for the care of your newborn.',
-      discount: 60, 
-      image: '../assets/images/page-imgages/dummy-img.jpg'
-    },
-    { 
-      name: 'Wine Hamper', 
-      price: 850, 
-      rating: 4.4, 
-      description: 'A fine selection of wines for your special occasion.',
-      discount: 85, 
-      image: '../assets/images/page-imgages/dummy-img.jpg'
-    },
-    { 
-      name: 'Luxury Perfume Hamper', 
-      price: 950, 
-      rating: 5, 
-      description: 'A selection of luxury perfumes for every occasion.',
-      discount: 95, 
-      image: '../assets/images/page-imgages/dummy-img.jpg'
-    },
-    { 
-      name: 'Assorted Snacks Basket', 
-      price: 400, 
-      rating: 4.2, 
-      description: 'An assortment of savory snacks and treats.',
-      discount: 40, 
-      image: '../assets/images/page-imgages/dummy-img.jpg'
+      id: 'hamp-02',
+      name: 'Handwoven Cane Spa & Wellness Basket', 
+      price: 1299, 
+      originalPrice: 1799,
+      rating: 4.7, 
+      category: 'Hamper Baskets',
+      description: 'Eco-friendly cane basket filled with organic bath salts, aromatherapy essential oils.',
+      discount: 500, 
+      image: '../assets/images/services/service-1.jpg'
+    }
+  ],
+
+  'trunk-boxes': [
+    {
+      id: 'trunk-01',
+      name: 'Hand-Painted Wooden Trousseau Trunk',
+      price: 2499,
+      originalPrice: 3500,
+      rating: 4.9,
+      category: 'Trunk Boxes',
+      description: 'Vintage teakwood trousseau box with brass latches and custom initials painting.',
+      discount: 1001,
+      image: '../assets/images/page-imgages/grid-3.jpg'
+    }
+  ],
+
+  'floral-jewellery': [
+    {
+      id: 'flor-01',
+      name: 'Haldi & Mehendi Fresh Floral Set',
+      price: 799,
+      originalPrice: 1299,
+      rating: 4.8,
+      category: 'Floral Jewellery',
+      description: 'Complete set featuring necklace, earrings, maang tikka & matching floral haathphool.',
+      discount: 500,
+      image: '../assets/images/page-imgages/grid-4.jpg'
     }
   ]
 };
 
-// More categories (up to 10) can be added similarly.
+// Default fallback items if category not found
+const defaultItems = itemsData['wedding-invitation'];
 
-
-// Display Category Items
-function showCategory(category) {
+function showCategory(categoryKey) {
   const title = document.getElementById('category-title');
   const itemsDiv = document.getElementById('items');
-  
-  title.innerText = category.replace(/-/g, ' ').toUpperCase();
+  if (!itemsDiv) return;
+
+  const displayTitle = categoryKey.replace(/-/g, ' ').toUpperCase();
+  if (title) title.innerText = displayTitle;
+
+  // Active sub-header menu highlighting
+  document.querySelectorAll('.header-2 nav ul li a').forEach(a => a.classList.remove('active'));
+  const activeLink = document.querySelector(`.header-2 nav ul li a[onclick*="${categoryKey}"]`);
+  if (activeLink) activeLink.classList.add('active');
+
+  const items = itemsData[categoryKey] || defaultItems;
   itemsDiv.innerHTML = '';
 
-  const items = itemsData[category];
-  if (items && items.length > 0) {
-    items.forEach(item => {
-      const itemCard = document.createElement('div');
-      itemCard.className = 'item-card';
-      itemCard.innerHTML = `
-        <img src="${item.image}" alt="${item.name}" class="item-image">
-        <h3>${item.name}</h3>
-        <p>${item.description}</p>
-        <div class="rating">${'★'.repeat(Math.round(item.rating))}</div>
-        <div class="discount">Discount: ₹${item.discount}</div>
-        <button onclick="addToCart('${item.name}', ${item.price}, ${item.discount})">Add ₹${item.price}</button>
-      `;
-      itemsDiv.appendChild(itemCard);
-    });
-  } else {
-    itemsDiv.innerHTML = '<p>No items available in this category.</p>';
+  function getCategoryAssetPath(path) {
+    if (!path) return '';
+    const clean = path.replace(/^(\.\/|\.\.\/)+/, '');
+    const isSub = window.location.pathname.includes('/src/');
+    return (isSub ? '../' : './') + clean;
   }
-}
 
-// Add items to the cart
-function addToCart(name, price, discount) {
-  cart.push({ name, price, discount });
-  updateCart();
-}
-
-// Update the cart UI
-function updateCart() {
-  const cartItemsDiv = document.getElementById('cart-items');
-  const subtotalDiv = document.getElementById('subtotal');
-  const discountDiv = document.getElementById('discount');
-  const totalDiv = document.getElementById('total-amount');
-  
-  cartItemsDiv.innerHTML = '';
-  let subtotal = 0;
-  let discount = 0;
-
-  cart.forEach(item => {
-    const cartItem = document.createElement('div');
-    cartItem.innerHTML = `${item.name} - ₹${item.price}`;
-    cartItemsDiv.appendChild(cartItem);
-    subtotal += item.price;
-    discount += item.discount;
+  items.forEach(item => {
+    const card = document.createElement('div');
+    card.className = 'product-card';
+    const imgSrc = getCategoryAssetPath(item.image);
+    card.innerHTML = `
+      <div class="product-img-wrapper">
+        <img src="${imgSrc}" alt="${item.name}" class="product-img">
+        <span class="product-discount-badge">Save ₹${item.discount}</span>
+        <button class="quick-view-btn" onclick='window.CreazenCart.openQuickView(${JSON.stringify(item)})'>
+          <i class="fa-regular fa-eye"></i> Quick View
+        </button>
+      </div>
+      <div class="product-card-body">
+        <span class="product-cat-tag">${item.category}</span>
+        <h3 class="product-title">${item.name}</h3>
+        <div class="product-rating">
+          <span class="stars">${'★'.repeat(Math.round(item.rating))}${'☆'.repeat(5 - Math.round(item.rating))}</span>
+          <span class="rating-num">(${item.rating})</span>
+        </div>
+        <p class="product-desc">${item.description}</p>
+        <div class="product-card-footer">
+          <div class="product-prices">
+            <span class="product-price">₹${item.price}</span>
+            <span class="product-orig-price">₹${item.originalPrice}</span>
+          </div>
+          <button class="add-to-cart-btn" onclick='window.CreazenCart.addItem(${JSON.stringify(item)})'>
+            <i class="fa-solid fa-bag-shopping"></i> Add
+          </button>
+        </div>
+      </div>
+    `;
+    itemsDiv.appendChild(card);
   });
-
-  subtotalDiv.innerText = subtotal;
-  discountDiv.innerText = discount;
-  totalDiv.innerText = subtotal - discount;
 }
 
-// Show the cart modal
-function showCart() {
-  document.getElementById('cart-modal').style.display = 'block';
-}
-
-// Close the cart modal
-function closeCart() {
-  document.getElementById('cart-modal').style.display = 'none';
-}
-
-// Proceed to the delivery form
-function showDeliveryForm() {
-  document.getElementById('cart-modal').style.display = 'none';
-  document.getElementById('delivery-form').style.display = 'block';
-}
-
-// Process the payment
-function processPayment() {
-  document.getElementById('payment-total').innerText = document.getElementById('total-amount').innerText;
-  document.getElementById('payment-page').style.display = 'block';
-  document.getElementById('delivery-form').style.display = 'none';
-}
-
-// Cancel the payment process
-function cancelPayment() {
-  document.getElementById('payment-page').style.display = 'none';
-}
+document.addEventListener('DOMContentLoaded', () => {
+  // Check URL params for category or search
+  const urlParams = new URLSearchParams(window.location.search);
+  const cat = urlParams.get('cat') || 'wedding-invitation';
+  showCategory(cat);
+});
